@@ -25,7 +25,7 @@
             </ul>
         </div>
         <div class="navbar-end">
-            <a class="btn text-base-300 font-bold bg-sky-400 hover:bg-sky-500 active:bg-sky-500">Login</a>
+            <a class="btn text-base-300 font-bold bg-cyan-600 hover:bg-cyan-700 active:bg-cyan-700">Login</a>
         </div>
     </div>
 </template>
