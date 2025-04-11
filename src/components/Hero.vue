@@ -75,8 +75,23 @@
         </div>
       </div>
 
-      <div class="w-full h-96 border"></div>
-      
+      <div class="md:p-8 p-4">
+        <div class="bg-base-100 border-base-300 collapse collapse-arrow border">
+          <input type="checkbox" class="peer" />
+          <div
+            class="collapse-title bg-cyan-800 text-primary-content peer-checked:bg-cyan-950 peer-checked:text-secondary-content"
+          >
+            <strong>Penting</strong>
+          </div>
+          <div
+            class="collapse-content font-semibold bg-cyan-800 text-primary-content peer-checked:bg-cyan-950 peer-checked:text-secondary-content"
+          >
+          “Perlu diingat, aplikasi ini bukan pengganti dokter, namun mampu memberikan saran awal berdasarkan referensi dari jurnal dan dokumen medis melalui teknologi RAG,
+          tujuan awalnya adalah untuk media informasi dan bukan pengganti konsultan medis profesional. Konsultasikan ke dokter untuk penanganan yang tepat.”
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 </template>

@@ -1,5 +1,8 @@
 <script setup lang="ts">
+    import { ref } from 'vue';
+    import ModalError from './ModalError.vue';
 
+    let isOpenModal = ref<boolean>(false);
 </script>
 
 <template>
@@ -25,7 +28,9 @@
             </ul>
         </div>
         <div class="navbar-end">
-            <a class="btn text-base-300 font-bold bg-cyan-600 hover:bg-cyan-700 active:bg-cyan-700">Login</a>
+            <button @click="isOpenModal = true" class="btn text-base-300 font-bold bg-cyan-600 hover:bg-cyan-700 active:bg-cyan-700">Login</button>
         </div>
     </div>
+
+    <ModalError :is-open-modal="isOpenModal"/>
 </template>
