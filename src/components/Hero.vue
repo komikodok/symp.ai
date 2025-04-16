@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <section class="py-8">
+  <section class="pt-20 pb-8">
     <div class="mx-auto max-w-7xl items-center bg-base-100 p-6 rounded-2xl shadow-md">
       <div class="flex justify-between">
           <div class="md:w-3/5 max-w-2xl mx-auto">
