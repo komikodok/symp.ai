@@ -1,5 +1,8 @@
 <script setup lang="ts">
-
+  import { ref } from 'vue';
+  import ModalError from './ModalError.vue';
+  
+  let isOpenModal = ref<boolean>(false);
 </script>
 
 <template>
@@ -12,8 +15,15 @@
               <span class="text-sky-600">- Didukung oleh AI</span>
             </h2>
             <p class="p-4 max-w-xl my-3 text-zinc-700 text-lg font-semibold">Dapatkan bantuan medis dari AI untuk memahami gejala Anda, memberikan saran awal, dan menyarankan langkah selanjutnya.</p>
-            <button class="btn btn-ghost justify-end m-4 font-semibold text-lg text-white bg-cyan-700 hover:bg-cyan-900 active:bg-cyan-900 border-transparent">Konsultasi sekarang</button>
+            <button 
+              class="btn btn-ghost justify-end m-4 font-semibold text-lg text-white bg-cyan-700 hover:bg-cyan-900 active:bg-cyan-900 border-transparent"
+              @click="isOpenModal = true"
+            >
+              Konsultasi sekarang
+            </button>
           </div>
+
+          <ModalError :is-open-modal="isOpenModal" @close="isOpenModal = false"/>
     
           <div class="w-96 hidden lg:flex justify-center mx-auto">
             <div class="flex m-4 overflow-hidden rounded-xl shadow-md bg-cyan-50">
