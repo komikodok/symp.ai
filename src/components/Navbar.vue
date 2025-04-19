@@ -19,7 +19,7 @@
                     <li><a class="btn justify-start bg-transparent border-transparent text-zinc-500 hover:text-sky-500 active:text-sky-500">About</a></li>
                 </ul>
             </div>
-            <a class="btn text-sky-700 border-transparent bg-transparent text-3xl lg:text-4xl font-bold">aidoc</a>
+            <a class="btn text-sky-700 border-transparent bg-transparent text-lg lg:text-2xl font-bold">SanoCare AI</a>
         </div>
         <div class="navbar-start w-full text-xl hidden lg:flex">
             <ul class="menu menu-horizontal menu-lg px-1">
@@ -27,8 +27,14 @@
                 <li><a class="btn bg-transparent border-transparent text-zinc-400 hover:text-sky-500 active:text-sky-500">About</a></li>
             </ul>
         </div>
-        <div class="navbar-end">
-            <button @click="isOpenModal = true" class="btn text-base-300 font-bold bg-cyan-600 hover:bg-cyan-700 active:bg-cyan-700">Login</button>
+        <div class="navbar-end gap-3">
+            <button @click="isOpenModal = true" class="flex gap-1 bg-transparent border-transparent cursor-pointer text-cyan-800 font-bold">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
+                </svg>
+                Login
+            </button>
+            <button @click="isOpenModal = true" class="btn text-base-300 font-bold bg-cyan-600 hover:bg-cyan-700 active:bg-cyan-700">Daftar</button>
         </div>
     </div>
 

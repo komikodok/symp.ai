@@ -1,20 +1,38 @@
 <script setup lang="ts">
   import { ref } from 'vue';
   import ModalError from './ModalError.vue';
+  import { motion } from 'motion-v';
   
   let isOpenModal = ref<boolean>(false);
 </script>
 
 <template>
-  <section class="pt-20 pb-8">
-    <div class="mx-auto max-w-7xl items-center bg-base-100 p-6 rounded-2xl shadow-md">
-      <div class="flex justify-between">
-          <div class="md:w-3/5 max-w-2xl mx-auto">
-            <h2 class="p-4 max-w-xl text-4xl font-bold text-sky-900 leading-relaxed">
+  <section class="pt-20 pb-8 bg-base-100">
+    <div class="mx-auto max-w-7xl bg-base-100 items-center p-6">
+      <div class="flex overflow-hidden justify-between">
+          <div class="md:w-3/5 overflow-hidden max-w-2xl mx-auto">
+            <motion.h2
+              :initial="{ opacity: 0, x: -100 }"
+              :animate="{ opacity: 1, scale: 1, x: 0 }"
+              :transition="{
+                  duration: 0.8,
+                  delay: 1,
+                  ease: [0, 0.71, 0.2, 1.01]
+              }"
+              class="p-4 max-w-xl text-4xl font-bold text-sky-900 leading-relaxed">
               Konsultasi Kesehatan 24/7 Kapan Saja, Dimana Saja. <br/>
               <span class="text-sky-600">- Didukung oleh AI</span>
-            </h2>
-            <p class="p-4 max-w-xl my-3 text-zinc-700 text-lg font-semibold">Dapatkan bantuan medis dari AI untuk memahami gejala Anda, memberikan saran awal, dan menyarankan langkah selanjutnya.</p>
+            </motion.h2>
+            <motion.p 
+              :initial="{ opacity: 0, y: 50 }"
+              :animate="{ opacity: 1, scale: 1, y: 0}"
+              :transition="{
+                delay: 1.5
+              }"
+              class="p-4 max-w-xl my-3 text-zinc-700 text-lg font-semibold"
+            >
+              Dapatkan bantuan medis dari AI untuk memahami gejala Anda, memberikan saran awal, dan menyarankan langkah selanjutnya.
+            </motion.p>
             <button 
               class="btn btn-ghost justify-end m-4 font-semibold text-lg text-white bg-cyan-700 hover:bg-cyan-900 active:bg-cyan-900 border-transparent"
               @click="isOpenModal = true"
@@ -25,7 +43,16 @@
 
           <ModalError :is-open-modal="isOpenModal" @close="isOpenModal = false"/>
     
-          <div class="w-96 hidden lg:flex justify-center mx-auto">
+          <motion.div 
+            :initial="{ opacity: 0, x: 100 }"
+            :animate="{ opacity: 100, scale: 1, x: 0 }"
+            :transition="{
+                duration: 0.8,
+                delay: 0.5,
+                ease: [0, 0.71, 0.2, 1.01]
+            }"
+            class="w-96 hidden lg:flex justify-center mx-auto"
+          >
             <div class="flex m-4 overflow-hidden rounded-xl shadow-md bg-cyan-50">
                 <img 
                   class="object-contain p-2 scale-230" 
@@ -33,7 +60,7 @@
                   alt="Ilustrasi Dokter AI" 
                 />
             </div>
-          </div>
+          </motion.div>
       </div>
 
       <div class="w-full grid grid-cols-2 lg:grid-cols-4 lg:gap-4 lg:my-8 justify-items-center">
