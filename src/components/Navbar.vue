@@ -19,7 +19,9 @@
                     <li><a class="btn justify-start bg-transparent border-transparent text-zinc-500 hover:text-sky-500 active:text-sky-500">About</a></li>
                 </ul>
             </div>
-            <a class="btn text-sky-700 border-transparent bg-transparent text-lg lg:text-2xl font-bold">SanoCare AI</a>
+            <a class="lg:ml-auto w-28 lg:w-32 flex">
+                <img src="/sanoai.png" alt="Logo sanoai" class="m-auto">
+            </a>
         </div>
         <div class="navbar-start w-full text-xl hidden lg:flex">
             <ul class="menu menu-horizontal menu-lg px-1">

@@ -8,6 +8,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    Footer: typeof import('./src/components/Footer.vue')['default']
     Hero: typeof import('./src/components/Hero.vue')['default']
     ModalError: typeof import('./src/components/ModalError.vue')['default']
     Navbar: typeof import('./src/components/Navbar.vue')['default']

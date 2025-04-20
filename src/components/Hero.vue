@@ -1,12 +1,24 @@
 <script setup lang="ts">
-  import { ref } from 'vue';
-  import ModalError from './ModalError.vue';
-  import { motion } from 'motion-v';
-  
-  let isOpenModal = ref<boolean>(false);
+import { ref } from 'vue';
+import ModalError from './ModalError.vue';
+import { motion, useScroll } from 'motion-v'
+
+let isOpenModal = ref<boolean>(false);
+
+const { scrollYProgress } = useScroll();
+const scrollIndicator = {
+    scaleX: scrollYProgress,
+    position: "fixed",
+    bottom: 0,
+    left: 0,
+    right: 0,
+    height: "10px",
+    originX: 0,
+}
 </script>
 
 <template>
+  <motion.div id="scroll-indicator" :style="scrollIndicator" class="bg-sky-800 rounded-full z-50" />
   <section class="pt-20 pb-8 bg-base-100">
     <div class="mx-auto max-w-7xl bg-base-100 items-center p-6">
       <div class="flex overflow-hidden justify-between">
@@ -16,7 +28,7 @@
               :animate="{ opacity: 1, scale: 1, x: 0 }"
               :transition="{
                   duration: 0.8,
-                  delay: 1,
+                  delay: 0.5,
                   ease: [0, 0.71, 0.2, 1.01]
               }"
               class="p-4 max-w-xl text-4xl font-bold text-sky-900 leading-relaxed">
@@ -27,18 +39,21 @@
               :initial="{ opacity: 0, y: 50 }"
               :animate="{ opacity: 1, scale: 1, y: 0}"
               :transition="{
-                delay: 1.5
+                delay: 1
               }"
               class="p-4 max-w-xl my-3 text-zinc-700 text-lg font-semibold"
             >
               Dapatkan bantuan medis dari AI untuk memahami gejala Anda, memberikan saran awal, dan menyarankan langkah selanjutnya.
             </motion.p>
-            <button 
+            <motion.button
+              :initial="{ opacity: 0 }"
+              :animate="{ opacity: 1, scale: 1}"
+              :transition="{ duration: 1 }"
               class="btn btn-ghost justify-end m-4 font-semibold text-lg text-white bg-cyan-700 hover:bg-cyan-900 active:bg-cyan-900 border-transparent"
               @click="isOpenModal = true"
             >
               Konsultasi sekarang
-            </button>
+            </motion.button>
           </div>
 
           <ModalError :is-open-modal="isOpenModal" @close="isOpenModal = false"/>
@@ -47,8 +62,7 @@
             :initial="{ opacity: 0, x: 100 }"
             :animate="{ opacity: 100, scale: 1, x: 0 }"
             :transition="{
-                duration: 0.8,
-                delay: 0.5,
+                duration: 1,
                 ease: [0, 0.71, 0.2, 1.01]
             }"
             class="w-96 hidden lg:flex justify-center mx-auto"
@@ -116,12 +130,12 @@
         <div class="bg-base-100 border-base-300 collapse collapse-arrow border">
           <input type="checkbox" class="peer" />
           <div
-            class="collapse-title bg-cyan-800 text-primary-content peer-checked:bg-cyan-950 peer-checked:text-secondary-content"
+            class="collapse-title bg-cyan-700 text-primary-content peer-checked:bg-cyan-900 peer-checked:text-secondary-content"
           >
             <strong>Penting</strong>
           </div>
           <div
-            class="collapse-content font-semibold bg-cyan-800 text-primary-content peer-checked:bg-cyan-950 peer-checked:text-secondary-content"
+            class="collapse-content font-semibold bg-cyan-700 text-primary-content peer-checked:bg-cyan-900 peer-checked:text-secondary-content"
           >
           “Perlu diingat, aplikasi ini bukan pengganti dokter, namun mampu memberikan saran awal berdasarkan referensi dari jurnal dan dokumen medis melalui teknologi RAG,
           tujuan awalnya adalah untuk media informasi dan bukan pengganti konsultan medis profesional. Konsultasikan ke dokter untuk penanganan yang tepat.”
