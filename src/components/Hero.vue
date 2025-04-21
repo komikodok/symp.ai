@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import ModalError from './ModalError.vue';
 import { motion, useScroll } from 'motion-v'
+import ModalError from './ModalError.vue';
+import HeroImage from './HeroImage.vue';
 
 let isOpenModal = ref<boolean>(false);
 
@@ -21,7 +22,7 @@ const scrollIndicator = {
   <motion.div id="scroll-indicator" :style="scrollIndicator" class="bg-sky-800 rounded-full z-50" />
   <section class="pt-20 pb-8 bg-base-100">
     <div class="mx-auto max-w-7xl bg-base-100 items-center p-6">
-      <div class="flex overflow-hidden justify-between">
+      <div class="flex justify-between">
           <div class="md:w-3/5 overflow-hidden max-w-2xl mx-auto">
             <motion.h2
               :initial="{ opacity: 0, x: -100 }"
@@ -63,17 +64,11 @@ const scrollIndicator = {
             :animate="{ opacity: 100, scale: 1, x: 0 }"
             :transition="{
                 duration: 1,
-                ease: [0, 0.71, 0.2, 1.01]
+                ease: 'linear'
             }"
             class="w-96 hidden lg:flex justify-center mx-auto"
           >
-            <div class="flex m-4 overflow-hidden rounded-xl shadow-md bg-cyan-50">
-                <img 
-                  class="object-contain p-2 scale-230" 
-                  src="/herodoc.png" 
-                  alt="Ilustrasi Dokter AI" 
-                />
-            </div>
+            <HeroImage />
           </motion.div>
       </div>
 
