@@ -1,2 +1,2 @@
 # Screenshot
-![App Screenshot](./public/aidoc.png)
+![App Screenshot](./public/landingpage.png)
