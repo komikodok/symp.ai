@@ -72,53 +72,67 @@ const scrollIndicator = {
           </motion.div>
       </div>
 
-      <div class="w-full grid grid-cols-2 lg:grid-cols-4 lg:gap-4 lg:my-8 justify-items-center">
-        <div class="card card-dash bg-base-100 w-50 h-50 max-md:scale-80 border-1 border-zinc-200 shadow-sm shadow-gray-300">
-            <div class="card-body">
-                <div class="flex text-cyan-950 gap-2 justify-center text-xl">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                      <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />
-                    </svg>
-                    <h2 class="card-title">Cepat</h2>
-                </div>
-                <p class="text-xl text-cyan-950 flex justify-center my-4">Respon secepat kilat</p>
-            </div>
-        </div>
-        <div class="card card-dash bg-base-100 w-50 h-50 max-md:scale-80 border-1 border-zinc-200 shadow-sm shadow-gray-300">
-            <div class="card-body">
-                <div class="flex text-cyan-950 gap-2 justify-center text-xl">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 0 0 0-1.5h-3.75V6Z" clip-rule="evenodd" />
-                    </svg>
+      <div class="w-full grid grid-cols-1 max-lg:gap-4 lg:grid-cols-3 my-7 lg:my-8 justify-items-center">
+        <motion.div
+          :initial="{ opacity: 0, y: 50 }"
+          :animate="{ opacity: 1, y: 0 }"
+          :transition="{ duration: 0.8, delay: 1.2 }"
+          class="relative card card-dash bg-white w-72 shadow-lg rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl lg:mx-5 overflow-hidden"
+        >
 
-                    <h2 class="card-title">24/7</h2>
-                </div>
-                <p class="text-xl text-cyan-950 flex justify-center my-4">Tersedia kapan saja</p>
+          <div class="card-body">
+            <div class="flex items-center gap-2 mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 text-sky-600">
+                <path fill-rule="evenodd" d="M4.848 2.771A49.144 49.144 0 0 1 12 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 0 1-3.476.383.39.39 0 0 0-.297.17l-2.755 4.133a.75.75 0 0 1-1.248 0l-2.755-4.133a.39.39 0 0 0-.297-.17 48.9 48.9 0 0 1-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97ZM6.75 8.25a.75.75 0 0 1 .75-.75h9a.75.75 0 0 1 0 1.5h-9a.75.75 0 0 1-.75-.75Zm.75 2.25a.75.75 0 0 0 0 1.5H12a.75.75 0 0 0 0-1.5H7.5Z" clip-rule="evenodd" />
+              </svg>
+              <h2 class="card-title text-xl font-semibold text-sky-800">AI Chatbot</h2>
             </div>
-        </div>
-        <div class="card card-dash bg-base-100 w-50 h-50 max-md:scale-80 border-1 border-zinc-200 shadow-sm shadow-gray-300">
-            <div class="card-body">
-                <div class="flex text-cyan-950 gap-2 justify-center text-xl">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                        <path d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 0 1-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004ZM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 0 1-.921.42Z" />
-                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v.816a3.836 3.836 0 0 0-1.72.756c-.712.566-1.112 1.35-1.112 2.178 0 .829.4 1.612 1.113 2.178.502.4 1.102.647 1.719.756v2.978a2.536 2.536 0 0 1-.921-.421l-.879-.66a.75.75 0 0 0-.9 1.2l.879.66c.533.4 1.169.645 1.821.75V18a.75.75 0 0 0 1.5 0v-.81a4.124 4.124 0 0 0 1.821-.749c.745-.559 1.179-1.344 1.179-2.191 0-.847-.434-1.632-1.179-2.191a4.122 4.122 0 0 0-1.821-.75V8.354c.29.082.559.213.786.393l.415.33a.75.75 0 0 0 .933-1.175l-.415-.33a3.836 3.836 0 0 0-1.719-.755V6Z" clip-rule="evenodd" />
-                    </svg>
-                    <h2 class="card-title">Gratis</h2>
-                </div>
-                <p class="text-xl text-cyan-950 flex justify-center my-4">Bebas biaya</p>
+            <p class="text-base text-zinc-700">
+              Dapatkan panduan medis instan dari AI pintar yang dilatih menggunakan dokumen medis terkait.
+            </p>
+          </div>
+        </motion.div>
+        <motion.div
+          :initial="{ opacity: 0, y: 50 }"
+          :animate="{ opacity: 1, y: 0 }"
+          :transition="{ duration: 0.8, delay: 1.2 }"
+          class="relative card card-dash bg-white w-72 shadow-lg rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl lg:mx-5 overflow-hidden"
+        >
+
+          <div class="card-body">
+            <div class="flex items-center gap-2 mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 text-sky-600">
+                <path d="M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.161 14.34 9 15.375 9h1.875A3.75 3.75 0 0 1 21 12.75v3.375C21 17.16 20.16 18 19.125 18h-9.75A1.875 1.875 0 0 1 7.5 16.125V3.375Z" />
+                <path d="M15 5.25a5.23 5.23 0 0 0-1.279-3.434 9.768 9.768 0 0 1 6.963 6.963A5.23 5.23 0 0 0 17.25 7.5h-1.875A.375.375 0 0 1 15 7.125V5.25ZM4.875 6H6v10.125A3.375 3.375 0 0 0 9.375 19.5H16.5v1.125c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625V7.875C3 6.839 3.84 6 4.875 6Z" />
+              </svg>
+
+              <h2 class="card-title text-xl font-semibold text-sky-800">Analisis Dokumen Medis</h2>
             </div>
-        </div>
-        <div class="card card-dash bg-base-100 w-50 h-50 max-md:scale-80 border-1 border-zinc-200 shadow-sm shadow-gray-300">
-            <div class="card-body">
-                <div class="flex text-cyan-950 gap-2 justify-center text-xl">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                        <path fill-rule="evenodd" d="M12.963 2.286a.75.75 0 0 0-1.071-.136 9.742 9.742 0 0 0-3.539 6.176 7.547 7.547 0 0 1-1.705-1.715.75.75 0 0 0-1.152-.082A9 9 0 1 0 15.68 4.534a7.46 7.46 0 0 1-2.717-2.248ZM15.75 14.25a3.75 3.75 0 1 1-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 0 1 1.925-3.546 3.75 3.75 0 0 1 3.255 3.718Z" clip-rule="evenodd" />
-                    </svg>
-                    <h2 class="card-title">Instan</h2>
-                </div>
-                <p class="text-xl text-cyan-950 flex justify-center my-4">Tanpa ribet</p>
+            <p class="text-base text-zinc-700">
+              Unggah dokumen medis Anda untuk mendapatkan saran yang disesuaikan dengan kondisi kesehatan Anda.
+            </p>
+          </div>
+        </motion.div>
+        <motion.div
+          :initial="{ opacity: 0, y: 50 }"
+          :animate="{ opacity: 1, y: 0 }"
+          :transition="{ duration: 0.8, delay: 1.2 }"
+          class="relative card card-dash bg-white w-72 shadow-lg rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl lg:mx-5 overflow-hidden"
+        >
+
+          <div class="card-body">
+            <div class="flex items-center gap-2 mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 text-sky-600">
+                <path fill-rule="evenodd" d="M4.848 2.771A49.144 49.144 0 0 1 12 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 0 1-3.476.383.39.39 0 0 0-.297.17l-2.755 4.133a.75.75 0 0 1-1.248 0l-2.755-4.133a.39.39 0 0 0-.297-.17 48.9 48.9 0 0 1-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97ZM6.75 8.25a.75.75 0 0 1 .75-.75h9a.75.75 0 0 1 0 1.5h-9a.75.75 0 0 1-.75-.75Zm.75 2.25a.75.75 0 0 0 0 1.5H12a.75.75 0 0 0 0-1.5H7.5Z" clip-rule="evenodd" />
+              </svg>
+              <h2 class="card-title text-xl font-semibold text-sky-800">AI Chatbot</h2>
             </div>
-        </div>
+            <p class="text-base text-zinc-700">
+              Dapatkan panduan medis instan dari AI pintar yang dilatih menggunakan dokumen medis terkait.
+            </p>
+          </div>
+        </motion.div>
+
       </div>
 
       <div class="md:p-8 p-4">

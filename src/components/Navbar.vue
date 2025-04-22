@@ -6,7 +6,7 @@
 </script>
 
 <template>
-    <div class="navbar bg-base-100 shadow-sm fixed z-10">
+    <div class="navbar bg-base-100 shadow-sm fixed z-20">
         <div class="navbar-start lg:w-72">
             <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
