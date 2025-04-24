@@ -1,0 +1,74 @@
+<script setup lang="ts">
+import { ref } from 'vue';
+
+const openModal = ref<boolean>(false);
+</script>
+
+<template>
+  <section class="relative max-w-7xl mx-auto p-6 mb-20 md:px-9 overflow-hidden">
+    <div class="w-[72rem] h-[24rem] absolute inset-0 bg-gradient-to-b from-transparent to-cyan-200/60 blur-md rounded-b-full -z-10"></div>
+    <div class="w-52 h-52 absolute right-10 bottom-0 bg-gradient-to-t from-transparent via-sky-200 to-sky-300/80 rounded-t-full -z-10"></div>
+
+    <div class="p-6 my-10 rounded-xl bg-white shadow-xl">
+      <h1 class="text-4xl text-gray-900 font-extrabold mb-8 drop-shadow">
+        Layanan <span class="text-cyan-700">Kesehatan</span>
+      </h1>
+
+      <div class="grid grid-cols-3 lg:grid-cols-6 gap-6">
+        <div class="bg-white p-4 flex flex-col items-center text-center hover:scale-105 active:scale-95">
+          <div class="w-20 h-20 cursor-pointer bg-gradient-to-br from-cyan-100 to-blue-400 p-2 rounded-xl mb-4 flex items-center justify-center">
+            <img src="/diabetes-test.png" alt="Diabetes">
+          </div>
+          <p class="text-gray-700 text-sm font-medium leading-tight">
+            Diabetes
+          </p>
+        </div>
+        <div class="bg-white p-4 flex flex-col items-center text-center hover:scale-105 active:scale-95">
+          <div class="w-20 h-20 cursor-pointer bg-gradient-to-br from-pink-100 to-pink-400 p-2 rounded-xl mb-4 flex items-center justify-center">
+            <img src="/cancer-cell.png" alt="Kanker">
+          </div>
+          <p class="text-gray-700 text-sm font-medium leading-tight">
+            Kanker
+          </p>
+        </div>
+        <div class="bg-white p-4 flex flex-col items-center text-center hover:scale-105 active:scale-95">
+          <div class="w-20 h-20 cursor-pointer bg-gradient-to-br from-zinc-100 to-zinc-500 p-2 rounded-xl mb-4 flex items-center justify-center">
+            <img src="/asthmatic.png" alt="Asma">
+          </div>
+          <p class="text-gray-700 text-sm font-medium leading-tight">
+            Asma
+          </p>
+        </div>
+        <div class="bg-white p-4 flex flex-col items-center text-center hover:scale-105 active:scale-95">
+          <div class="w-20 h-20 cursor-pointer bg-gradient-to-br from-amber-200 via-amber-400 to-amber-600 p-2 rounded-xl mb-4 flex items-center justify-center">
+            <img src="/dermatology.png" alt="Kulit">
+          </div>
+          <p class="text-gray-700 text-sm font-medium leading-tight">
+            Penyakit Kulit
+          </p>
+        </div>
+        <div class="bg-white p-4 flex flex-col items-center text-center hover:scale-105 active:scale-95">
+          <div class="w-20 h-20 cursor-pointer bg-gradient-to-br from-red-300 to-red-500 p-2 rounded-xl mb-4 flex items-center justify-center">
+            <img src="/hearth.png" alt="Jantung">
+          </div>
+          <p class="text-gray-700 text-sm font-medium leading-tight">
+            Penyakit Jantung
+          </p>
+        </div>
+        <div @click="openModal = true" class="bg-white p-4 flex flex-col items-center text-center hover:scale-105 active:scale-95">
+          <div class="w-20 h-20 cursor-pointer grid grid-cols-2 p-1 mask mask-hexagon-2 mb-4 items-center justify-center">
+            <div class="w-7 h-7 bg-sky-300 rounded-md m-auto"></div>
+            <div class="w-7 h-7 bg-cyan-300 rounded-md m-auto"></div>
+            <div class="w-7 h-7 bg-cyan-300 rounded-md m-auto"></div>
+            <div class="w-7 h-7 bg-sky-300 rounded-md m-auto"></div>
+          </div>
+          <p class="text-gray-700 text-sm font-medium leading-tight">
+            Lihat Semua
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <HealthServicesModal :open-modal="openModal"/>
+  </section>
+</template>

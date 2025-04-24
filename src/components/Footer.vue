@@ -6,7 +6,8 @@
         <nav>
             <h6 class="footer-title">Services</h6>
             <a class="link link-hover">AI Chatbot</a>
-            <a class="link link-hover">Document Analysis</a>
+            <a class="link link-hover">Medical Document Analysis</a>
+            <a class="link link-hover">Medical Image Analysis</a>
         </nav>
         <nav>
             <h6 class="footer-title">Company</h6>

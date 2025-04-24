@@ -8,9 +8,15 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    Chatbot: typeof import('./src/components/Chatbot.vue')['default']
+    Features: typeof import('./src/components/Features.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
+    HealthFeatures: typeof import('./src/components/HealthFeatures.vue')['default']
+    HealthServices: typeof import('./src/components/HealthServices.vue')['default']
+    HealthServicesModal: typeof import('./src/components/HealthServicesModal.vue')['default']
     Hero: typeof import('./src/components/Hero.vue')['default']
     HeroImage: typeof import('./src/components/HeroImage.vue')['default']
+    LandingPage: typeof import('./src/components/LandingPage.vue')['default']
     ModalError: typeof import('./src/components/ModalError.vue')['default']
     Navbar: typeof import('./src/components/Navbar.vue')['default']
   }
