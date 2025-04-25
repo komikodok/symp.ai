@@ -2,18 +2,22 @@
 const { openModal } = defineProps<{
     openModal: boolean
 }>();
+
+const emit = defineEmits<{
+  (e: 'close'): void;
+}>();
 </script>
 
 <template>
-  <section v-if="openModal" class="fixed inset-0 max-w-7xl mx-auto p-6 mb-20 md:px-9 overflow-hidden">
-    <div class="fixed inset-0 bg-black opacity-40"></div>
+  <section v-if="openModal">
+    <div @click="emit('close')" class="fixed bg-black opacity-50 z-20 inset-0"></div>
     
-    <div class="p-6 my-10 rounded-xl bg-white shadow-xl">
+    <div class="fixed bottom-1/2 translate-y-1/2 right-1/2 translate-x-1/2 w-[38rem] lg:w-[52rem]  p-6 mb-20 md:px-9 my-10 rounded-xl bg-white shadow-xl z-30">
       <h1 class="text-4xl text-gray-900 font-extrabold mb-8 drop-shadow">
         Layanan <span class="text-cyan-700">Kesehatan</span>
       </h1>
 
-      <div class="grid grid-cols-3 lg:grid-cols-6 gap-6">
+      <div class="grid grid-cols-4 lg:grid-cols-6 gap-7">
         <div class="bg-white p-4 flex flex-col items-center text-center hover:scale-105 active:scale-95">
           <div class="w-20 h-20 cursor-pointer bg-gradient-to-br from-cyan-100 to-blue-400 p-2 rounded-xl mb-4 flex items-center justify-center">
             <img src="/diabetes-test.png" alt="Diabetes">

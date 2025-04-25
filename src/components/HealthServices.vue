@@ -69,6 +69,6 @@ const openModal = ref<boolean>(false);
       </div>
     </div>
 
-    <HealthServicesModal :open-modal="openModal"/>
+    <HealthServicesModal :open-modal="openModal" @close="openModal = false"/>
   </section>
 </template>
