@@ -16,8 +16,11 @@ declare module 'vue' {
     HealthServicesModal: typeof import('./src/components/HealthServicesModal.vue')['default']
     Hero: typeof import('./src/components/Hero.vue')['default']
     HeroImage: typeof import('./src/components/HeroImage.vue')['default']
+    LandingHero: typeof import('./src/components/LandingHero.vue')['default']
     LandingPage: typeof import('./src/components/LandingPage.vue')['default']
     ModalError: typeof import('./src/components/ModalError.vue')['default']
     Navbar: typeof import('./src/components/Navbar.vue')['default']
+    Services: typeof import('./src/components/Services.vue')['default']
+    ServicesHero: typeof import('./src/components/ServicesHero.vue')['default']
   }
 }

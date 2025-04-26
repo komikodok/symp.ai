@@ -26,7 +26,7 @@
         <div class="navbar-start w-full text-xl hidden lg:flex">
             <ul class="menu menu-horizontal menu-lg px-1">
                 <li><a class="btn bg-transparent border-transparent text-zinc-400 hover:text-sky-500 active:text-sky-500">Home</a></li>
-                <li><a class="btn bg-transparent border-transparent text-zinc-400 hover:text-sky-500 active:text-sky-500">About</a></li>
+                <li><a class="btn bg-transparent border-transparent text-zinc-400 hover:text-sky-500 active:text-sky-500">Services</a></li>
             </ul>
         </div>
         <div class="navbar-end gap-3">
