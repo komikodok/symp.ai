@@ -22,5 +22,6 @@ declare module 'vue' {
     Navbar: typeof import('./src/components/Navbar.vue')['default']
     Services: typeof import('./src/components/Services.vue')['default']
     ServicesHero: typeof import('./src/components/ServicesHero.vue')['default']
+    TabSelect: typeof import('./src/components/TabSelect.vue')['default']
   }
 }

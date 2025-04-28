@@ -6,8 +6,6 @@ const openModal = ref<boolean>(false);
 
 <template>
   <section class="relative max-w-7xl mx-auto p-6 mb-20 md:px-9 overflow-hidden">
-    <div class="w-[72rem] h-[24rem] absolute inset-0 bg-gradient-to-b from-transparent to-cyan-200/60 blur-md rounded-b-full -z-10"></div>
-    <div class="w-52 h-52 absolute right-10 bottom-0 bg-gradient-to-t from-transparent via-sky-200 to-sky-300/80 rounded-t-full -z-10"></div>
 
     <div class="p-6 my-10 rounded-xl bg-white shadow-xl">
       <h1 class="text-4xl text-cyan-700 font-extrabold mb-8 drop-shadow">
