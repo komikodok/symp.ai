@@ -2,6 +2,7 @@
 import { motion, useScroll } from 'motion-v';
 
 import ServicesHero from './ServicesHero.vue';
+import ServicesContent from './ServicesContent.vue';
 
 const { scrollYProgress } = useScroll();
 const scrollIndicator = {
@@ -19,4 +20,5 @@ const scrollIndicator = {
     <motion.div id="scroll-indicator" :style="scrollIndicator" class="bg-sky-800 rounded-full z-50" />
     
     <ServicesHero />
+    <ServicesContent />
 </template>

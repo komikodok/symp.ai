@@ -21,6 +21,7 @@ declare module 'vue' {
     ModalError: typeof import('./src/components/ModalError.vue')['default']
     Navbar: typeof import('./src/components/Navbar.vue')['default']
     Services: typeof import('./src/components/Services.vue')['default']
+    ServicesContent: typeof import('./src/components/ServicesContent.vue')['default']
     ServicesHero: typeof import('./src/components/ServicesHero.vue')['default']
     TabSelect: typeof import('./src/components/TabSelect.vue')['default']
   }

@@ -19,7 +19,7 @@
                     <li><a class="btn justify-start bg-transparent border-transparent text-zinc-500 hover:text-sky-500 active:text-sky-500">About</a></li>
                 </ul>
             </div>
-            <a class="lg:ml-auto w-28 lg:w-32 flex">
+            <a href="/" class="lg:ml-auto cursor-pointer w-28 lg:w-32 flex">
                 <img src="/sanoai.png" alt="Logo sanoai" class="m-auto">
             </a>
         </div>
