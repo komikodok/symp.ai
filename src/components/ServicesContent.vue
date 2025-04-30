@@ -7,7 +7,7 @@ const tabs = ['Chatbot', 'Analisa Dokumen Medis', 'Analisa Foto Medis']
 </script>
 
 <template>
-    <div class="max-w-7xl mx-auto border p-3 flex">
+    <div class="max-w-7xl h-auto p-3 mx-auto max-lg:justify-center border flex">
         <TabSelect :tabs="tabs" :currentTab="currentTab" @update-tab="(newTab: string) => currentTab = newTab"/>
     </div>
 </template>
