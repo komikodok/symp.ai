@@ -38,7 +38,8 @@ const handleClick = (tab: string, i: number) => {
     <div class="relative w-fit h-auto ">
         <!-- Highlight -->
         <motion.div 
-            class="absolute h-full -z-10 bg-cyan-400 rounded-lg" 
+            class="absolute h-full
+             -z-10 bg-cyan-400 rounded-lg" 
             :style="{width: highlightWidth}"
             :animate="{ x: highlightX}"
         />
