@@ -9,6 +9,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Chatbot: typeof import('./src/components/Chatbot.vue')['default']
+    ChatbotContent: typeof import('./src/components/ChatbotContent.vue')['default']
     Features: typeof import('./src/components/Features.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
     HealthFeatures: typeof import('./src/components/HealthFeatures.vue')['default']
@@ -17,12 +18,16 @@ declare module 'vue' {
     Hero: typeof import('./src/components/Hero.vue')['default']
     HeroImage: typeof import('./src/components/HeroImage.vue')['default']
     LandingHero: typeof import('./src/components/LandingHero.vue')['default']
+    LandingImage: typeof import('./src/components/LandingImage.vue')['default']
     LandingPage: typeof import('./src/components/LandingPage.vue')['default']
+    Loading: typeof import('./src/components/Loading.vue')['default']
     ModalError: typeof import('./src/components/ModalError.vue')['default']
     Navbar: typeof import('./src/components/Navbar.vue')['default']
     Services: typeof import('./src/components/Services.vue')['default']
     ServicesContent: typeof import('./src/components/ServicesContent.vue')['default']
     ServicesHero: typeof import('./src/components/ServicesHero.vue')['default']
+    SpecialistContent: typeof import('./src/components/SpecialistContent.vue')['default']
+    SpecialistModal: typeof import('./src/components/SpecialistModal.vue')['default']
     TabSelect: typeof import('./src/components/TabSelect.vue')['default']
   }
 }

@@ -1,7 +1,16 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
+import SpecialistModal from './SpecialistModal.vue';
 
 const openModal = ref<boolean>(false);
+
+watch(openModal, (isOpen) => {
+  if (isOpen) {
+    document.body.classList.add('overflow-hidden');
+  } else {
+    document.body.classList.remove('overflow-hidden');
+  }
+});
 </script>
 
 <template>
@@ -67,6 +76,6 @@ const openModal = ref<boolean>(false);
       </div>
     </div>
 
-    <HealthServicesModal :open-modal="openModal" @close="openModal = false"/>
+    <SpecialistModal :open-modal="openModal" @close="openModal = false"/>
   </section>
 </template>

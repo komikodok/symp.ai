@@ -1,13 +1,20 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import TabSelect from './TabSelect.vue';
 
-const currentTab = ref<string>('Chatbot');
-const tabs = ['Chatbot', 'Analisa Dokumen Medis', 'Analisa Foto Medis']
+import TabSelect from './TabSelect.vue';
+import ChatbotContent from './ChatbotContent.vue';
+
+const currentTab = ref<string>('Chatbot AI');
+const tabs = ['Chatbot AI', 'Analisa Dokumen Medis', 'Analisa Foto Medis']
 </script>
 
 <template>
-    <div class="max-w-7xl h-auto p-3 mx-auto max-lg:justify-center border flex">
-        <TabSelect :tabs="tabs" :currentTab="currentTab" @update-tab="(newTab: string) => currentTab = newTab"/>
+    <div class="max-w-7xl h-auto p-3 mx-auto my-10 max-lg:justify-center flex">
+        <TabSelect :tabs="tabs" :current-tab="currentTab" @update-tab="(newTab: string) => currentTab = newTab"/>
+    </div>
+
+    <div class="relative max-w-7xl h-96 mx-auto">
+        <ChatbotContent :current-tab="currentTab"/>
     </div>
 </template>
+

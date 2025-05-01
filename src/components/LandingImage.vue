@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { motion } from 'motion-v';
-
-
 </script>
 
 <template>
@@ -42,7 +40,7 @@ import { motion } from 'motion-v';
             }"
             class="absolute bottom-0 right-14 grid grid-cols-2 rounded-full w-72 h-72"
         >
-            <div class="w-25 h-25 flex tooltip tooltip-bottom tooltip-secondary -translate-x-20 -translate-y-20 bg-base-100 rounded-full border-2 border-cyan-700 m-auto z-10"  data-tip="Tanpa biaya">
+            <div class="w-25 h-25 flex tooltip tooltip-bottom tooltip-primary -translate-x-20 -translate-y-20 bg-base-100 rounded-full border-2 border-cyan-700 m-auto z-10"  data-tip="Tanpa biaya">
                 <div class="flex text-cyan-950 gap-2 m-auto">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                         <path d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 0 1-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004ZM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 0 1-.921.42Z" />
@@ -52,7 +50,7 @@ import { motion } from 'motion-v';
                 </div>
             </div>
 
-            <div class="w-25 h-25 scale-90 flex tooltip tooltip-bottom tooltip-secondary translate-x-20 bg-base-100 rounded-full border-2 border-cyan-700 m-auto z-10" data-tip="Tersedia kapan saja">
+            <div class="w-25 h-25 scale-90 flex tooltip tooltip-bottom tooltip-primary translate-x-20 bg-base-100 rounded-full border-2 border-cyan-700 m-auto z-10" data-tip="Tersedia kapan saja">
                 <div class="flex text-cyan-950 gap-2 m-auto">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                         <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 0 0 0-1.5h-3.75V6Z" clip-rule="evenodd" />
@@ -62,7 +60,7 @@ import { motion } from 'motion-v';
                 </div>
             </div>
 
-            <div class="w-25 h-25 scale-80 flex tooltip tooltip-top tooltip-secondary -translate-x-30 bg-base-100 rounded-full border-2 border-cyan-700 m-auto z-10" data-tip="Respon secepat kilat">
+            <div class="w-25 h-25 scale-80 flex tooltip tooltip-top tooltip-primary -translate-x-30 bg-base-100 rounded-full border-2 border-cyan-700 m-auto z-10" data-tip="Respon secepat kilat">
                 <div class="flex text-cyan-950 gap-2 m-auto">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                       <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />

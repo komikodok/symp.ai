@@ -35,19 +35,21 @@ const handleClick = (tab: string, i: number) => {
 </script>
 
 <template>
-    <div class="relative w-fit h-auto ">
+    <div class="relative w-fit h-auto">
         <!-- Highlight -->
         <motion.div 
-            class="absolute h-full -z-10 bg-cyan-400 rounded-lg" 
-            :style="{width: highlightWidth}"
-            :animate="{ x: highlightX}"
+            class="absolute h-full -z-10 bg-sky-600 rounded-xl shadow-md" 
+            :style="{ width: highlightWidth }"
+            :animate="{ x: highlightX }"
+            :transition="{ duration: 0.3, ease: 'easeInOut' }"
         />
         <!-- Button -->
-        <div class="flex border">
+        <div class="flex shadow-lg rounded-xl overflow-hidden">
             <button
                 v-for="(tab, i) in props.tabs"
                 ref="tab"
-                class="font-semibold m-2 p-2 cursor-pointer"
+                class="relative font-semibold mx-1 px-4 py-2 cursor-pointer transition-colors duration-300 rounded-lg"
+                :class="currentTab === tab ? 'text-white' : 'text-slate-800 hover:text-sky-600'"
                 @click.prevent="handleClick(tab, i)"
             >
                 {{ tab }}

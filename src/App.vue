@@ -9,5 +9,5 @@ import Navbar from './components/Navbar.vue';
   <Navbar />
   <Services />
    <!-- <LandingPage /> -->
-  <!-- <Footer></Footer> -->
+  <Footer></Footer>
 </template>

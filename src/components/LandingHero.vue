@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { motion } from 'motion-v';
-import HeroImage from './HeroImage.vue';
+import LandingImage from './LandingImage.vue';
 import Chatbot from './Chatbot.vue';
 
 let openChatbot = ref<boolean>(false);
@@ -57,7 +57,7 @@ let openChatbot = ref<boolean>(false);
             }"
             class="w-96 hidden lg:flex justify-center mx-auto"
           >
-            <HeroImage />
+            <LandingImage />
           </motion.div>
       </div>
 
@@ -74,7 +74,7 @@ let openChatbot = ref<boolean>(false);
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 text-sky-600">
                 <path fill-rule="evenodd" d="M4.848 2.771A49.144 49.144 0 0 1 12 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 0 1-3.476.383.39.39 0 0 0-.297.17l-2.755 4.133a.75.75 0 0 1-1.248 0l-2.755-4.133a.39.39 0 0 0-.297-.17 48.9 48.9 0 0 1-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97ZM6.75 8.25a.75.75 0 0 1 .75-.75h9a.75.75 0 0 1 0 1.5h-9a.75.75 0 0 1-.75-.75Zm.75 2.25a.75.75 0 0 0 0 1.5H12a.75.75 0 0 0 0-1.5H7.5Z" clip-rule="evenodd" />
               </svg>
-              <h2 class="card-title text-xl font-semibold text-sky-800">AI Chatbot</h2>
+              <h2 class="card-title text-xl font-semibold text-sky-800">Chatbot AI</h2>
             </div>
             <p class="text-base text-zinc-700">
               Dapatkan panduan medis instan dari AI pintar yang dilatih menggunakan dokumen medis terkait.
@@ -87,7 +87,6 @@ let openChatbot = ref<boolean>(false);
           :transition="{ duration: 0.8, delay: 1.2 }"
           class="relative card card-dash bg-white w-72 shadow-lg rounded-xl transition-all duration-300 active:scale-105 active:shadow-xl hover:scale-105 hover:shadow-xl lg:mx-5 overflow-hidden"
         >
-
           <div class="card-body">
             <div class="flex items-center gap-2 mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 text-sky-600">
@@ -95,7 +94,7 @@ let openChatbot = ref<boolean>(false);
                 <path d="M15 5.25a5.23 5.23 0 0 0-1.279-3.434 9.768 9.768 0 0 1 6.963 6.963A5.23 5.23 0 0 0 17.25 7.5h-1.875A.375.375 0 0 1 15 7.125V5.25ZM4.875 6H6v10.125A3.375 3.375 0 0 0 9.375 19.5H16.5v1.125c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625V7.875C3 6.839 3.84 6 4.875 6Z" />
               </svg>
 
-              <h2 class="card-title text-xl font-semibold text-sky-800">Analisis Dokumen Medis</h2>
+              <h2 class="card-title text-xl font-semibold text-sky-800">Analisa Dokumen Medis</h2>
             </div>
             <p class="text-base text-zinc-700">
               Unggah dokumen medis Anda untuk mendapatkan saran yang disesuaikan dengan kondisi kesehatan Anda.
@@ -115,7 +114,7 @@ let openChatbot = ref<boolean>(false);
                 <path d="M12 9a3.75 3.75 0 1 0 0 7.5A3.75 3.75 0 0 0 12 9Z" />
                 <path fill-rule="evenodd" d="M9.344 3.071a49.52 49.52 0 0 1 5.312 0c.967.052 1.83.585 2.332 1.39l.821 1.317c.24.383.645.643 1.11.71.386.054.77.113 1.152.177 1.432.239 2.429 1.493 2.429 2.909V18a3 3 0 0 1-3 3h-15a3 3 0 0 1-3-3V9.574c0-1.416.997-2.67 2.429-2.909.382-.064.766-.123 1.151-.178a1.56 1.56 0 0 0 1.11-.71l.822-1.315a2.942 2.942 0 0 1 2.332-1.39ZM6.75 12.75a5.25 5.25 0 1 1 10.5 0 5.25 5.25 0 0 1-10.5 0Zm12-1.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" />
               </svg>
-              <h2 class="card-title text-xl font-semibold text-sky-800">Analisis Foto Medis</h2>
+              <h2 class="card-title text-xl font-semibold text-sky-800">Analisa Foto Medis</h2>
             </div>
             <p class="text-base text-zinc-700">
               Unggah foto medis seperti hasil scan atau luka, dan AI akan memberikan analisis serta saran medis awal.
