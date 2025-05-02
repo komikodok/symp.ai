@@ -14,7 +14,7 @@ const tabs = ['Chatbot AI', 'Analisa Dokumen Medis', 'Analisa Foto Medis']
     </div>
 
     <div class="relative max-w-7xl h-96 mx-auto">
-        <ChatbotContent :current-tab="currentTab"/>
+        <ChatbotContent v-if="currentTab === 'Chatbot AI'"/>
     </div>
 </template>
 

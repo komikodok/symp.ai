@@ -23,7 +23,7 @@ import { motion } from 'motion-v';
             }"
             class="absolute bottom-34 left-32 rounded-full bg-sky-100 blur-sm w-60 h-60" />
         <motion.div 
-            :animate="{ x: [0, 5, 10, -20, 0], y: [0, -10, -20, -20, 0] }"
+            :animate="{ x: [-3, 5, 10, -20, 0], y: [-3, -10, -20, -20, 0] }"
             :transition="{
                 duration: 5,
                 delay: 1,
@@ -70,11 +70,12 @@ import { motion } from 'motion-v';
             </div>
 
         </motion.div>
-        <div class="flex overflow-hidden shadow-xs shadow-cyan-200">
+        <div class="flex -translate-x-7 translate-y-5 overflow-hidden">
             <img 
-                class="object-contain p-2 scale-230" 
-                src="/herodoc.png" 
-                alt="Ilustrasi Dokter AI" 
+                class="object-contain scale-120 pointer-events-none p-2 -z-10" 
+                src="/1.png" 
+                alt="Avatar" 
+                draggable="false"
             />
         </div>
     </div>

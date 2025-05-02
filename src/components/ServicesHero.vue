@@ -39,5 +39,14 @@ import { motion } from 'motion-v';
         <span class="text-cyan-600 text-lg font-bold">Lihat Fitur</span>
       </motion.button>
     </div>
+
+    <div class="absolute bottom-0 translate-y-5 right-0 w-82 h-82 mx-3">
+      <img 
+          class="object-contain scale-120 rounded-full pointer-events-none p-2" 
+          src="/1.png" 
+          alt="Avatar" 
+          draggable="false"
+      />
+    </div>
   </section>
 </template>
