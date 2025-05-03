@@ -40,11 +40,11 @@ import { motion } from 'motion-v';
       </motion.button>
     </div>
 
-    <div class="absolute bottom-0 translate-y-5 right-0 w-82 h-82 mx-3">
+    <div class="absolute bottom-0 translate-y-12 right-0 w-82 h-82 mx-3">
       <img 
-          class="object-contain scale-120 rounded-full pointer-events-none p-2" 
-          src="/1.png" 
-          alt="Avatar" 
+          class="object-contain -scale-x-100 pointer-events-none p-2" 
+          src="/2.png" 
+          alt="Avatar 2" 
           draggable="false"
       />
     </div>
