@@ -70,9 +70,9 @@ import { motion } from 'motion-v';
             </div>
 
         </motion.div>
-        <div class="flex -translate-x-7 translate-y-5 overflow-hidden">
+        <div class="flex translate-y-5 overflow-hidden">
             <img 
-                class="object-contain scale-120 pointer-events-none p-2 -z-10" 
+                class="object-contain pointer-events-none p-2 -z-10" 
                 src="/1.png" 
                 alt="Avatar" 
                 draggable="false"

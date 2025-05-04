@@ -19,14 +19,14 @@
                     <li><a class="btn justify-start bg-transparent border-transparent text-zinc-500 hover:text-sky-500 active:text-sky-500">About</a></li>
                 </ul>
             </div>
-            <a href="/" class="lg:ml-auto cursor-pointer w-28 lg:w-32 flex">
-                <img src="/sanoai.png" alt="Logo sanoai" class="m-auto">
+            <a href="/" class="lg:ml-auto cursor-pointer w-28 lg:w-24 flex">
+                <img src="/logo.png" alt="Logo sanoai" class="m-auto">
             </a>
         </div>
         <div class="navbar-start w-full text-xl hidden lg:flex">
             <ul class="menu menu-horizontal menu-lg px-1">
-                <li><a class="btn bg-transparent border-transparent text-zinc-400 hover:text-sky-500 active:text-sky-500">Home</a></li>
-                <li><a class="btn bg-transparent border-transparent text-zinc-400 hover:text-sky-500 active:text-sky-500">Services</a></li>
+                <li><a class="btn bg-transparent border-transparent text-zinc-400 hover:text-sky-500 active:text-sky-500">Beranda</a></li>
+                <li><a class="btn bg-transparent border-transparent text-zinc-400 hover:text-sky-500 active:text-sky-500">Layanan</a></li>
             </ul>
         </div>
         <div class="navbar-end gap-3">

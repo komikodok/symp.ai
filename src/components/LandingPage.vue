@@ -2,6 +2,7 @@
 import { motion, useScroll } from 'motion-v'
 import LandingHero from './LandingHero.vue';
 import SpecialistContent from './SpecialistContent.vue';
+import CharacterIntro from './CharacterIntro.vue';
 
 const { scrollYProgress } = useScroll();
 const scrollIndicator = {
@@ -19,5 +20,8 @@ const scrollIndicator = {
     <motion.div id="scroll-indicator" :style="scrollIndicator" class="bg-sky-800 rounded-full z-50" />
 
     <LandingHero />
+
     <SpecialistContent />
+
+    <CharacterIntro />
 </template>
