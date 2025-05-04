@@ -41,7 +41,12 @@ import { motion } from 'motion-v';
     </div>
 
     <div class="absolute bottom-0 translate-y-12 right-0 w-82 h-82 mx-3">
-      <img 
+      <motion.img 
+          :initial="{ y: 25, opacity: 0 }"
+          :animate="{ y: 0, opacity: 1 }"
+          :transition="{
+            duration: 1
+          }"
           class="object-contain -scale-x-100 pointer-events-none p-2" 
           src="/2.png" 
           alt="Avatar 2" 

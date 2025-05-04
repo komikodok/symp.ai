@@ -24,6 +24,5 @@ const isLoading = ref<boolean>(false);
             “Konsultasikan pertanyaan medis Anda secara instan dengan AI, didukung oleh dokumen, jurnal, karya ilmiah medis terkait.
             Chatbot ini dapat membantu menjawab pertanyaan seputar kesehatan umum, gejala penyakit, dan rekomendasi awal.“
         </motion.h2>
-
     </div>
 </template>
