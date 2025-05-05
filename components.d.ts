@@ -27,6 +27,7 @@ declare module 'vue' {
     Services: typeof import('./src/components/Services.vue')['default']
     ServicesContent: typeof import('./src/components/ServicesContent.vue')['default']
     ServicesHero: typeof import('./src/components/ServicesHero.vue')['default']
+    SpecialistCard: typeof import('./src/components/SpecialistCard.vue')['default']
     SpecialistContent: typeof import('./src/components/SpecialistContent.vue')['default']
     SpecialistModal: typeof import('./src/components/SpecialistModal.vue')['default']
     TabSelect: typeof import('./src/components/TabSelect.vue')['default']
