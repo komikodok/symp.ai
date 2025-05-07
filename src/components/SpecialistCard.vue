@@ -50,11 +50,13 @@ onMounted(() => {
   >
     <!-- Header -->
     <div class="flex items-center gap-4 p-4 shadow-md">
-      <div class="w-12 h-12 rounded-full border-2 border-sky-500 flex items-center justify-center">
-        <!-- Avatar -->
+      <div class="w-12 h-12 rounded-full flex items-center justify-center">
+        <slot name="image"></slot>
       </div>
       <div>
-        <h2 class="font-semibold text-lg text-gray-800">Spesialis Jantung</h2>
+        <h2 class="font-semibold text-lg text-gray-800">
+          <slot name="header"></slot>
+        </h2>
         <p class="flex items-center text-sm text-gray-500 gap-1">
           <span>1</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
@@ -72,9 +74,9 @@ onMounted(() => {
     </div>
 
     <!-- Content -->
-    <div class="px-4 pt-2 pb-4">
+    <div class="flex items-center text-start my-2 h-42 p-7 overflow-y-scroll" :style="{scrollbarWidth: 'none'}">
       <p class="text-gray-700 text-sm leading-relaxed">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis fuga sint aperiam voluptas, dolores iure nam, dicta eius, accusamus ab numquam autem dolore officia fugiat modi hic molestiae nemo praesentium.
+        <slot name="content"></slot>
       </p>
     </div>
 

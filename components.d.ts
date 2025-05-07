@@ -8,6 +8,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    Carousel: typeof import('./src/components/Carousel.vue')['default']
     CharacterIntro: typeof import('./src/components/CharacterIntro.vue')['default']
     Chatbot: typeof import('./src/components/Chatbot.vue')['default']
     ChatbotContent: typeof import('./src/components/ChatbotContent.vue')['default']

@@ -85,8 +85,9 @@ let openChatbot = ref<boolean>(false);
           :initial="{ opacity: 0, y: 50 }"
           :animate="{ opacity: 1, y: 0 }"
           :transition="{ duration: 0.8, delay: 1.2 }"
-          class="relative card card-dash bg-white w-72 shadow-lg rounded-xl transition-all duration-300 active:scale-105 active:shadow-xl hover:scale-105 hover:shadow-xl lg:mx-5 overflow-hidden"
+          class="relative indicator card card-dash bg-white w-72 shadow-lg rounded-xl transition-all duration-300 active:scale-105 active:shadow-xl hover:scale-105 hover:shadow-xl lg:mx-5"
         >
+          <span class="indicator-item badge badge-info text-white p-3">Akan hadir</span>
           <div class="card-body">
             <div class="flex items-center gap-2 mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 text-sky-600">
@@ -105,9 +106,9 @@ let openChatbot = ref<boolean>(false);
           :initial="{ opacity: 0, y: 50 }"
           :animate="{ opacity: 1, y: 0 }"
           :transition="{ duration: 0.8, delay: 1.2 }"
-          class="relative card card-dash bg-white w-72 shadow-lg rounded-xl transition-all duration-300 active:scale-105 active:shadow-xl hover:scale-105 hover:shadow-xl lg:mx-5 overflow-hidden"
+          class="relative indicator card card-dash bg-white w-72 shadow-lg rounded-xl transition-all duration-300 active:scale-105 active:shadow-xl hover:scale-105 hover:shadow-xl lg:mx-5"
         >
-
+          <span class="indicator-item badge badge-info text-white p-3">Akan hadir</span>
           <div class="card-body">
             <div class="flex items-center gap-2 mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 text-sky-600">
