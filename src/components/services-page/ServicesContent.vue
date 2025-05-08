@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-import TabSelect from './TabSelect.vue';
-import ChatbotService from './ChatbotService.vue';
+import TabSelect from '../common/TabSelect.vue';
+import ChatbotContent from './chatbot-ai/Content.vue';
 
 const currentTab = ref<string>('Chatbot AI');
 const tabs = ['Chatbot AI', 'Analisa Dokumen Medis', 'Analisa Foto Medis']
@@ -14,7 +14,7 @@ const tabs = ['Chatbot AI', 'Analisa Dokumen Medis', 'Analisa Foto Medis']
     </div>
 
     <div class="relative max-w-7xl mx-auto mb-32">
-        <ChatbotService v-if="currentTab === 'Chatbot AI'"/>
+        <ChatbotContent v-if="currentTab === 'Chatbot AI'"/>
     </div>
 
 

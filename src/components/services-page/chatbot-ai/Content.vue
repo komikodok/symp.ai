@@ -2,8 +2,8 @@
 import { ref, watch } from 'vue';
 import { motion } from 'motion-v';
 
-import SpecialistModal from '../landing-page/SpecialistModal.vue';
-import Loading from './Loading.vue';
+import SpecialistModal from '../../landing-page/SpecialistModal.vue';
+import Loading from '../../common/Loading.vue';
 import Carousel from './Carousel.vue';
 
 const openModal = ref<boolean>(false);
