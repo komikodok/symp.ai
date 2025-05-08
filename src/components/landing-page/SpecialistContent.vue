@@ -14,7 +14,7 @@ watch(openModal, (isOpen) => {
 </script>
 
 <template>
-  <section class="relative max-w-7xl mx-auto p-6 mb-20 md:px-9 overflow-hidden">
+  <section class="relative max-w-7xl mx-auto p-6 mb-32 md:px-9 overflow-hidden">
 
     <div class="p-6 my-10 rounded-xl bg-white shadow-xl">
       <h1 class="text-4xl text-cyan-700 font-extrabold mb-8 drop-shadow">

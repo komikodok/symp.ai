@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import LandingPage from './components/LandingPage.vue';
-// import Services from './components/Services.vue';
+// import LandingPage from './components/landing-page/LandingPage.vue';
+import Services from './components/services/Services.vue';
 import Navbar from './components/Navbar.vue';
 // import Footer from './components/Footer.vue';
 </script>
 
 <template>
   <Navbar />
-  <!-- <Services /> -->
-  <LandingPage />
+  <Services />
+  <!-- <LandingPage /> -->
   <Footer></Footer>
 </template>

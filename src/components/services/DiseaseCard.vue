@@ -12,10 +12,9 @@ const emit = defineEmits<{
 
 onMounted(() => {
   emit('is-open-skeleton', true);
-
   setTimeout(() => {
     emit('is-open-skeleton', false);
-  }, 2200)
+  }, 2200);
 });
 </script>
 
@@ -29,7 +28,6 @@ onMounted(() => {
         <p class="flex skeleton w-34 h-4 items-center text-sm text-gray-500 gap-1"></p>
       </div>
     </div>
-
     <div class="flex flex-col gap-4 px-4 h-42 py-5">
       <p class="skeleton w-full h-4"></p>
       <p class="skeleton w-[80%] h-4"></p>
@@ -40,16 +38,14 @@ onMounted(() => {
 
   <!-- Card -->
   <motion.div 
-    :initial="{ opacity: 0 }"
-    :animate="{ opacity: 1 }"
-    :transition="{
-      duration: 0.8
-    }"
+    :initial="{ opacity: 0, y: 30 }"
+    :animate="{ opacity: 1, y: 0 }"
+    :transition="{ duration: 0.6 }"
     v-if="!openSkeleton" 
-    class="w-72 bg-white shadow-xl rounded-2xl overflow-hidden"
+    class="w-72 bg-white shadow-xl rounded-2xl overflow-hidden transform transition hover:-translate-y-2 hover:shadow-2xl"
   >
     <!-- Header -->
-    <div class="flex items-center gap-4 p-4 shadow-md">
+    <div class="flex items-center gap-4 p-4">
       <div class="w-12 h-12 rounded-full flex items-center justify-center">
         <slot name="image"></slot>
       </div>
@@ -74,17 +70,17 @@ onMounted(() => {
     </div>
 
     <!-- Content -->
-    <div class="flex items-center text-start my-2 h-42 p-7 overflow-y-scroll" :style="{scrollbarWidth: 'none'}">
-      <p class="text-gray-700 text-sm leading-relaxed">
+    <div class="px-4 pb-4">
+      <p class="text-gray-700 text-sm leading-relaxed line-clamp-4">
         <slot name="content"></slot>
       </p>
     </div>
 
-    <!-- Button -->
     <div class="px-4 pb-4">
       <button 
-        class="w-full btn bg-sky-500 hover:bg-sky-600 text-white font-medium py-2 rounded-lg">
-        Konsultasi Sekarang
+        class="w-full bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2 rounded-lg shadow-md transition"
+      >
+        Mulai
       </button>
     </div>
   </motion.div>

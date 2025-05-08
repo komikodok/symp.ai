@@ -2,7 +2,7 @@
 import { ref, onMounted, onUnmounted, useTemplateRef } from 'vue';
 import { motion } from 'motion-v';
 
-import SpecialistCard from './SpecialistCard.vue';
+import DiseaseCard from './DiseaseCard.vue';
 
 const openSkeleton = ref(false);
 
@@ -50,7 +50,7 @@ onMounted(() => {
         <div ref="carousel-ref" class="carousel carousel-center space-x-7 p-4 max-w-3xl lg:max-w-6xl">
             
           <div class="carousel-item">
-            <SpecialistCard :open-skeleton="openSkeleton" @is-open-skeleton="(state: boolean) => openSkeleton = state">
+            <DiseaseCard :open-skeleton="openSkeleton" @is-open-skeleton="(state: boolean) => openSkeleton = state">
               <template #header>
                 Diabetes
               </template>
@@ -60,11 +60,11 @@ onMounted(() => {
               <template #content>
                 Kendalikan gula darah Anda dengan lebih baik. Dapatkan saran awal tentang pola makan, gejala seperti sering haus, sering buang air kecil, dan pencegahan komplikasi.
               </template>
-            </SpecialistCard>
+            </DiseaseCard>
           </div>
 
           <div class="carousel-item">
-            <SpecialistCard :open-skeleton="openSkeleton" @is-open-skeleton="(state: boolean) => openSkeleton = state">
+            <DiseaseCard :open-skeleton="openSkeleton" @is-open-skeleton="(state: boolean) => openSkeleton = state">
               <template #header>
                 Kanker
               </template>
@@ -74,11 +74,11 @@ onMounted(() => {
               <template #content>
                 Pahami lebih dalam gejala awal kanker seperti benjolan yang tidak hilang, penurunan berat badan drastis, atau perubahan kulit. Dapatkan saran untuk pemeriksaan lebih lanjut.
               </template>
-            </SpecialistCard>
+            </DiseaseCard>
           </div>
 
           <div class="carousel-item">
-            <SpecialistCard :open-skeleton="openSkeleton" @is-open-skeleton="(state: boolean) => openSkeleton = state">
+            <DiseaseCard :open-skeleton="openSkeleton" @is-open-skeleton="(state: boolean) => openSkeleton = state">
               <template #header>
                 Asma
               </template>
@@ -88,11 +88,11 @@ onMounted(() => {
               <template #content>
                 Kenali tanda-tanda asma seperti sesak napas, batuk malam hari, atau mengi. Dapatkan tips pengendalian serangan asma.
               </template>
-            </SpecialistCard>
+            </DiseaseCard>
           </div>
 
           <div class="carousel-item">
-            <SpecialistCard :open-skeleton="openSkeleton" @is-open-skeleton="(state: boolean) => openSkeleton = state">
+            <DiseaseCard :open-skeleton="openSkeleton" @is-open-skeleton="(state: boolean) => openSkeleton = state">
               <template #header>
                 Kulit
               </template>
@@ -102,11 +102,11 @@ onMounted(() => {
               <template #content>
                 Cari tahu penyebab masalah kulit Anda, mulai dari alergi, jerawat, hingga infeksi. Dapatkan saran awal untuk perawatan yang tepat.
               </template>
-            </SpecialistCard>
+            </DiseaseCard>
           </div>
 
           <div class="carousel-item">
-            <SpecialistCard :open-skeleton="openSkeleton" @is-open-skeleton="(state: boolean) => openSkeleton = state">
+            <DiseaseCard :open-skeleton="openSkeleton" @is-open-skeleton="(state: boolean) => openSkeleton = state">
               <template #header>
                 Jantung
               </template>
@@ -116,11 +116,11 @@ onMounted(() => {
               <template #content>
                 Pahami kondisi jantung Anda lebih baik. Dapatkan saran awal mengenai gejala seperti nyeri dada, detak tidak teratur, dan sesak napas.
               </template>
-            </SpecialistCard>
+            </DiseaseCard>
           </div>
 
           <div class="carousel-item">
-            <SpecialistCard :open-skeleton="openSkeleton" @is-open-skeleton="(state: boolean) => openSkeleton = state">
+            <DiseaseCard :open-skeleton="openSkeleton" @is-open-skeleton="(state: boolean) => openSkeleton = state">
               <template #header>
                 Darah Tinggi
               </template>
@@ -130,11 +130,11 @@ onMounted(() => {
               <template #content>
                 Pantau tekanan darah Anda dan pelajari cara mencegah komplikasi. Dapatkan saran tentang pola hidup sehat dan tanda-tanda bahaya.
               </template>
-            </SpecialistCard>
+            </DiseaseCard>
           </div>
 
           <div class="carousel-item">
-            <SpecialistCard :open-skeleton="openSkeleton" @is-open-skeleton="(state: boolean) => openSkeleton = state">
+            <DiseaseCard :open-skeleton="openSkeleton" @is-open-skeleton="(state: boolean) => openSkeleton = state">
               <template #header>
                 Kolesterol
               </template>
@@ -144,7 +144,7 @@ onMounted(() => {
               <template #content>
                 Ketahui cara mengendalikan kadar kolesterol. Dapatkan saran pola makan sehat, olahraga, dan risiko yang harus diwaspadai.
               </template>
-            </SpecialistCard>
+            </DiseaseCard>
           </div>
 
         </div>
