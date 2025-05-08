@@ -38,12 +38,10 @@ onMounted(() => {
     <div class="relative flex justify-center mt-20">
         <motion.div 
             :animate="{ opacity: showLeftGradient ? [0, 1] : [1, 0] }"
-            :transition="{ duration: 0.4 }"
             v-if="showLeftGradient" 
             class="absolute left-0 w-[12%] h-full bg-gradient-to-r from-base-100 via-base-100 to-transparent"></motion.div>
         <motion.div 
             :animate="{ opacity: showRightGradient ? [0, 1] : [1, 0] }"
-            :transition="{ duration: 0.4 }"
             v-if="showRightGradient" 
             class="absolute right-0 w-[12%] h-full bg-gradient-to-l from-base-100 via-base-100 to-transparent"></motion.div>
 
