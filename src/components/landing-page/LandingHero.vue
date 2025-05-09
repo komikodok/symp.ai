@@ -1,10 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue';
 import { motion } from 'motion-v';
 import LandingImage from './LandingImage.vue';
-import Chatbot from './Chatbot.vue';
-
-let openChatbot = ref<boolean>(false);
 
 </script>
 
@@ -40,14 +36,11 @@ let openChatbot = ref<boolean>(false);
               :animate="{ opacity: 1, scale: 1}"
               :transition="{ duration: 1 }"
               class="btn btn-ghost justify-end m-4 font-semibold text-lg text-white bg-cyan-700 hover:bg-cyan-900 active:bg-cyan-900 border-transparent"
-              @click="openChatbot = true"
             >
               Konsultasi sekarang
             </motion.button>
           </div>
 
-          <Chatbot :open-chatbot="openChatbot" @close="openChatbot = false"/>
-    
           <motion.div 
             :initial="{ opacity: 0, x: 100 }"
             :animate="{ opacity: 100, scale: 1, x: 0 }"
