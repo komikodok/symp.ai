@@ -5,7 +5,7 @@ const hoverStates = ref([false, false, false]);
 </script>
 
 <template>
-    <ul class="menu bg-base-200 gap-6 lg:gap-3 h-screen">
+    <ul class="menu bg-base-200 gap-6 lg:gap-3 h-full">
         <li class="tooltip tooltip-right" data-tip="Kembali">
             <a class="hover:bg-transparent" @mouseover="hoverStates[0] = true" @mouseleave="hoverStates[0] = false">
                 <svg 

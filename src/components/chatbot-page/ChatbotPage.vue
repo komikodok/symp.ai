@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import SideBar from './SideBar.vue';
-import ChatList from './ChatList.vue';
+import ChatMenu from './ChatMenu.vue';
 </script>
 
 <template>
-    <div class="flex">
+    <div class="flex h-screen">
         <SideBar />
-        <ChatList />
+        <ChatMenu />
     </div>
     
 </template>
