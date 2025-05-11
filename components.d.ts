@@ -18,6 +18,7 @@ declare module 'vue' {
     ChatLis: typeof import('./src/components/chatbot-page/ChatLis.vue')['default']
     ChatList: typeof import('./src/components/chatbot-page/ChatList.vue')['default']
     ChatMenu: typeof import('./src/components/chatbot-page/ChatMenu.vue')['default']
+    ChatNavbar: typeof import('./src/components/chatbot-page/ChatNavbar.vue')['default']
     ChatWIndow: typeof import('./src/components/chatbot-page/ChatWIndow.vue')['default']
     Content: typeof import('./src/components/services-page/chatbot-ai/Content.vue')['default']
     DiseaseCard: typeof import('./src/components/services-page/chatbot-ai/DiseaseCard.vue')['default']
