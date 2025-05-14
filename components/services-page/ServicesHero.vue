@@ -35,6 +35,7 @@ import { motion } from 'motion-v';
         :animate="{ opacity: 1, scale: 1}"
         :transition="{ duration: 1 }"
         class="relative btn w-60 hover:bg-indigo-100 active:bg-indigo-100 border-none shadow-none rounded-full"
+        @click="$emit('scroll-target')"
       >
         <span class="text-cyan-600 text-lg font-bold">Lihat Fitur</span>
       </motion.button>

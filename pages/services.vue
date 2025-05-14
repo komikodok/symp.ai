@@ -14,11 +14,18 @@ const scrollIndicator = {
     height: "10px",
     originX: 0,
 }
+
+const childRef = useTemplateRef<InstanceType<(typeof ServicesContent)>>('child-ref');
+
+const handleScrollTarget = () => {
+    const target = childRef.value;
+    console.log(target?.scrollTarget?.scrollIntoView({behavior: 'smooth'}));
+}
 </script>
 
 <template>
     <motion.div id="scroll-indicator" :style="scrollIndicator" class="bg-sky-800 rounded-full z-50" />
     
-    <ServicesHero />
-    <ServicesContent />
+    <ServicesHero @scroll-target="handleScrollTarget"/>
+    <ServicesContent ref="child-ref" />
 </template>
