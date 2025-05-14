@@ -5,10 +5,13 @@ import { motion } from 'motion-v';
 <template>
     <motion.nav 
         :animate="{ y: [-100, 0], opacity: [0, 1]}"
-        :transition="{ duration: 1 }"
+        :transition="{ duration: 0.7 }"
         class="flex justify-between items-center shadow-sm w-full h-20 bg-gradient-to-b from-white via-white/90 to-base-100/60 z-10"
     >
-        <a href="#" class="font-bold text-2xl text-cyan-800 ml-4">Aeglen</a>
+        <NuxtLink to="/">
+            <h2 class="font-bold text-2xl text-cyan-800 ml-4">Aeglen</h2>
+        </NuxtLink>
+        
         <div class="dropdown dropdown-end mr-4">
             <div tabindex="0" role="button" class="btn btn-ghost m-1">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">

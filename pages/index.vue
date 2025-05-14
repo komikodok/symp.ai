@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { motion, useScroll } from 'motion-v'
-import LandingHero from './LandingHero.vue';
-import SpecialistContent from './SpecialistContent.vue';
-import CharacterIntro from './CharacterIntro.vue';
+import LandingHero from '~/components/landing-page/LandingHero.vue';
+import SpecialistContent from '~/components/landing-page/SpecialistContent.vue';
+import CharacterIntro from '~/components/landing-page/CharacterIntro.vue';
 
 const { scrollYProgress } = useScroll();
 const scrollIndicator = {

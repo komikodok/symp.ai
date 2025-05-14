@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { motion, useScroll } from 'motion-v';
 
-import ServicesHero from './ServicesHero.vue';
-import ServicesContent from './ServicesContent.vue';
+import ServicesHero from '~/components/services-page/ServicesHero.vue';
+import ServicesContent from '~/components/services-page/ServicesContent.vue';
 
 const { scrollYProgress } = useScroll();
 const scrollIndicator = {
