@@ -36,6 +36,7 @@ import LandingImage from './LandingImage.vue';
               :animate="{ opacity: 1, scale: 1}"
               :transition="{ duration: 1 }"
               class="btn btn-ghost justify-end m-4 font-semibold text-lg text-white bg-cyan-700 hover:bg-cyan-900 active:bg-cyan-900 border-transparent"
+              @click="() => navigateTo('/chat')"
             >
               Konsultasi sekarang
             </motion.button>

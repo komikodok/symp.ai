@@ -8,8 +8,8 @@ import { motion } from 'motion-v';
         :transition="{ duration: 0.7 }"
         class="flex justify-between items-center shadow-sm w-full h-20 bg-gradient-to-b from-white via-white/90 to-base-100/60 z-10"
     >
-        <NuxtLink to="/">
-            <h2 class="font-bold text-2xl text-cyan-800 ml-4">Aeglen</h2>
+        <NuxtLink :to="$route.path" class="mx-auto">
+            <h2 class="font-bold text-2xl text-cyan-800 ml-4">Konsultasikan Keluhan Anda</h2>
         </NuxtLink>
         
         <div class="dropdown dropdown-end mr-4">

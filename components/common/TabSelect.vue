@@ -30,6 +30,8 @@ const handleClick = (tab: string, i: number) => {
     if (btn) {
         highlightWidth.value = `${btn.offsetWidth}px`;
         highlightX.value = btn.offsetLeft;
+
+        btn.scrollIntoView({behavior: 'smooth'});
     }
 }
 </script>

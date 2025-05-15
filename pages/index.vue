@@ -4,6 +4,10 @@ import LandingHero from '~/components/landing-page/LandingHero.vue';
 import SpecialistContent from '~/components/landing-page/SpecialistContent.vue';
 import CharacterIntro from '~/components/landing-page/CharacterIntro.vue';
 
+definePageMeta({
+    layout: 'navbar'
+});
+
 const { scrollYProgress } = useScroll();
 const scrollIndicator = {
     scaleX: scrollYProgress,
@@ -14,6 +18,7 @@ const scrollIndicator = {
     height: "10px",
     originX: 0,
 }
+
 </script>
 
 <template>

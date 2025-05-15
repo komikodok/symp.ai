@@ -4,6 +4,10 @@ import { motion, useScroll } from 'motion-v';
 import ServicesHero from '~/components/services-page/ServicesHero.vue';
 import ServicesContent from '~/components/services-page/ServicesContent.vue';
 
+definePageMeta({
+    layout: 'navbar'
+});
+
 const { scrollYProgress } = useScroll();
 const scrollIndicator = {
     scaleX: scrollYProgress,
@@ -19,7 +23,7 @@ const childRef = useTemplateRef<InstanceType<(typeof ServicesContent)>>('child-r
 
 const handleScrollTarget = () => {
     const target = childRef.value;
-    console.log(target?.scrollTarget?.scrollIntoView({behavior: 'smooth'}));
+    target?.scrollTarget?.scrollIntoView({behavior: 'smooth'});
 }
 </script>
 

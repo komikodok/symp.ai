@@ -3,10 +3,10 @@ const emit = defineEmits<{
   (e: 'select-carousel', name: string): void;
 }>();
 
-const handleClick = (event: MouseEvent) => {
-  const target = event.target as HTMLElement;
-  emit('select-carousel', target.innerText.trim());
-};
+// const handleClick = (event: MouseEvent) => {
+//   const target = event.target as HTMLElement;
+//   emit('select-carousel', target.innerText.trim());
+// };
 </script>
 
 <template>
@@ -22,9 +22,9 @@ const handleClick = (event: MouseEvent) => {
             <ul
                 class="collapse-content flex flex-col gap-2 bg-base-100 text-neutral peer-checked:text-neutral"
             >
-                <li @click="handleClick" class="p-1 cursor-pointer hover:bg-gray-100 active:bg-gray-100  ">Diabetes</li>
-                <li @click="handleClick" class="p-1 cursor-pointer hover:bg-gray-100 active:bg-gray-100  ">Darah Tinggi</li>
-                <li @click="handleClick" class="p-1 cursor-pointer hover:bg-gray-100 active:bg-gray-100  ">Kolesterol</li>
+                <li @click="" class="p-1 cursor-pointer hover:bg-gray-100 active:bg-gray-100  ">Diabetes</li>
+                <li @click="" class="p-1 cursor-pointer hover:bg-gray-100 active:bg-gray-100  ">Darah Tinggi</li>
+                <li @click="" class="p-1 cursor-pointer hover:bg-gray-100 active:bg-gray-100  ">Kolesterol</li>
             </ul>
         </li>
 
@@ -39,7 +39,7 @@ const handleClick = (event: MouseEvent) => {
             <ul
                 class="collapse-content flex flex-col gap-2 bg-base-100 text-neutral peer-checked:text-neutral"
             >
-                <li @click="handleClick" class="p-1 cursor-pointer hover:bg-gray-100 active:bg-gray-100  ">Penyakit Jantung</li>
+                <li @click="" class="p-1 cursor-pointer hover:bg-gray-100 active:bg-gray-100">Penyakit Jantung</li>
             </ul>
         </li>
 
@@ -54,7 +54,7 @@ const handleClick = (event: MouseEvent) => {
             <ul
                 class="collapse-content flex flex-col gap-2 bg-base-100 text-neutral peer-checked:text-neutral"
             >
-                <li @click="handleClick" class="p-1 cursor-pointer hover:bg-gray-100 active:bg-gray-100  ">Penyakit Paru-paru</li>
+                <li @click="" class="p-1 cursor-pointer hover:bg-gray-100 active:bg-gray-100  ">Penyakit Paru-paru</li>
             </ul>
         </li>
 
@@ -69,7 +69,7 @@ const handleClick = (event: MouseEvent) => {
             <ul
                 class="collapse-content flex flex-col gap-2 bg-base-100 text-neutral peer-checked:text-neutral"
             >
-                <li @click="handleClick" class="p-1 cursor-pointer hover:bg-gray-100 active:bg-gray-100  ">Penyakit Kulit</li>
+                <li @click="" class="p-1 cursor-pointer hover:bg-gray-100 active:bg-gray-100  ">Penyakit Kulit</li>
             </ul>
         </li>
 
@@ -84,7 +84,7 @@ const handleClick = (event: MouseEvent) => {
             <ul
                 class="collapse-content flex flex-col gap-2 bg-base-100 text-neutral peer-checked:text-neutral"
             >
-                <li @click="handleClick" class="p-1 cursor-pointer hover:bg-gray-100 active:bg-gray-100  ">Kanker</li>
+                <li @click="" class="p-1 cursor-pointer hover:bg-gray-100 active:bg-gray-100  ">Kanker</li>
             </ul>
         </li>
        
