@@ -6,7 +6,7 @@ const hoverStates = ref([false, false, false]);
 
 <template>
     <ul class="menu bg-base-200 gap-6 lg:gap-3 h-full">
-        <li @click="$router.back()" class="tooltip tooltip-right" data-tip="Kembali">
+        <li @click="() => $router.back()" class="tooltip tooltip-right" data-tip="Kembali">
             <a class="hover:bg-transparent" @mouseover="hoverStates[0] = true" @mouseleave="hoverStates[0] = false">
                 <svg 
                     v-if="!hoverStates[0]"
@@ -24,7 +24,7 @@ const hoverStates = ref([false, false, false]);
 
             </a>
         </li>
-        <li class="tooltip tooltip-right" data-tip="Beranda">
+        <li @click="() => navigateTo('/chat')" class="tooltip tooltip-right" data-tip="Beranda">
             <a class="hover:bg-transparent" @mouseover="hoverStates[1] = true" @mouseleave="hoverStates[1] = false">
                 <svg 
                     v-if="!hoverStates[1]"
@@ -43,7 +43,7 @@ const hoverStates = ref([false, false, false]);
 
             </a>
         </li>
-        <li class="tooltip tooltip-right" data-tip="Pesan">
+        <li @click="() => navigateTo('/chat/diabetes')" class="tooltip tooltip-right" data-tip="Pesan">
             <a class="hover:bg-transparent" @mouseover="hoverStates[2] = true" @mouseleave="hoverStates[2] = false">
                 <svg 
                     v-if="!hoverStates[2]"

@@ -6,7 +6,7 @@ import ChatMessage from './ChatMessage.vue';
 
 <template>
   <motion.div 
-    class="absolute bg-gradient-to-b from-cyan-100/90 to-white overflow-y-auto w-full h-full py-28 px-6"
+    class="absolute bg-gradient-to-b from-cyan-100/90 via-cyan-100/80 to-white overflow-y-auto w-full h-full py-28 px-6"
   >
     <div class="space-y-6 max-w-3xl mx-auto">
       <ChatMessage role="user" content="Apa gejala sinusitis?" />

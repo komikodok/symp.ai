@@ -2,9 +2,7 @@
 import { motion } from 'motion-v';
 
 import ChatCollapse from './ChatCollapse.vue';
-import { ref } from 'vue';
 
-const carouselName = ref<string>("");
 </script>
 
 <template>
@@ -15,11 +13,11 @@ const carouselName = ref<string>("");
   >
     <header class="w-full bg-cyan-500 h-20 flex justify-between items-center px-8 rounded-t-lg">
       <h2 class="font-semibold text-xl text-white">Aeglen</h2>
-      <div class="flex-shrink-0 rounded-lg bg-sky-100 w-14 h-14 relative">
+      <div class="flex-shrink-0 w-14 h-14 relative">
         <img src="/1.png" alt="Avatar" class="w-full h-full rounded-full">
       </div>
     </header>
 
-    <ChatCollapse @select-carousel="(name: string) => carouselName = name"/>
+    <ChatCollapse @select-collapse="(collapseName: string) => $emit('select-collapse', collapseName)"/>
   </motion.div>
 </template>

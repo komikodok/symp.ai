@@ -26,7 +26,7 @@ const scrollIndicator = {
 
     <LandingHero />
 
-    <SpecialistContent />
+    <SpecialistContent :scroll-y-progress="scrollYProgress" />
 
     <CharacterIntro />
 </template>
