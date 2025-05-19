@@ -1,9 +1,23 @@
 <script setup lang="ts">
 import { motion } from 'motion-v';
 
+const { promptProps} = defineProps<{
+    promptProps?: string
+}>();
+
 const prompt = ref<string>("");
 
+watch(() => promptProps, (newVal) => {
+    if (newVal) {
+        prompt.value = newVal;
+    }
+});
+
 const textareaRef = useTemplateRef<(HTMLTextAreaElement)>('textarea-ref');
+
+defineExpose({
+    textareaRef
+})
 
 const autoResize = () => {
     if (textareaRef.value) {
@@ -35,6 +49,7 @@ watch(prompt, autoResize);
             rows="1"
             class="w-full resize-none overflow-hidden bg-white outline-none"
             placeholder="Tanyakan keluhan anda"
+            @keydown.enter.prevent
             />
             <div class="tooltip" data-tip="Kirim pesan">
                 <button 

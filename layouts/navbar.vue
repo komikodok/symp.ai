@@ -15,7 +15,7 @@
                     <RouterLink 
                         v-for="(link, index) in [
                             {name: 'Beranda', to: '/'},
-                            {name: 'Layanan', to: '/services'},
+                            {name: 'Layanan', to: '/layanan'},
                         ]"
                         :key="index"
                         :to="link.to"
@@ -37,7 +37,7 @@
                 <RouterLink 
                     v-for="(link, index) in [
                         {name: 'Beranda', to: '/'},
-                        {name: 'Layanan', to: '/services'},
+                        {name: 'Layanan', to: '/layanan'},
                     ]"
                     :key="index"
                     :to="link.to"

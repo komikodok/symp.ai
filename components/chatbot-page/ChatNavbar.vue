@@ -8,9 +8,14 @@ import { motion } from 'motion-v';
         :transition="{ duration: 0.7 }"
         class="flex justify-between items-center w-full h-20 bg-gradient-to-b from-cyan-200/90 via-cyan-200/70 to-cyan-100/90 z-10"
     >
-        <NuxtLink :to="$route.path" class="mx-auto">
-            <h2 class="font-bold opacity-100 text-2xl text-cyan-800 ml-4">Konsultasi {{ inject('collapseName') }}</h2>
-        </NuxtLink>
+        <div 
+            @click="() => navigateTo($route.fullPath)"
+            class="font-bold opacity-100 text-2xl w-full text-center text-cyan-800 ml-4 cursor-pointer"
+        >
+            <span>
+                Konsultasi {{ inject('collapseName') }}
+            </span>
+        </div>
         
         <div class="dropdown dropdown-end mr-4">
             <div tabindex="0" role="button" class="btn btn-ghost bg-transparent border-transparent m-1">

@@ -6,7 +6,7 @@ const emit = defineEmits<{
 const handleClick = (event: MouseEvent) => {
   const target = event.target as HTMLElement;
   emit('select-collapse', target.innerText.trim());
-  navigateTo(`/chat/${target.innerText.trim().toLowerCase()}`)
+  navigateTo(`/konsultasi/${target.innerText.trim().toLowerCase()}`)
 };
 </script>
 
