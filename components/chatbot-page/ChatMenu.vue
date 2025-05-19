@@ -14,7 +14,7 @@ import ChatCollapse from './ChatCollapse.vue';
     <header class="w-full bg-cyan-500 h-20 flex justify-between items-center px-8 rounded-t-lg">
       <h2 class="font-semibold text-xl text-white">Aeglen</h2>
       <div class="flex-shrink-0 w-14 h-14 relative">
-        <img src="/1.png" alt="Avatar" class="w-full h-full rounded-full">
+        <img src="/logo2.png" alt="Avatar" class="w-full h-full bg-base-100 border-2 border-cyan-700 rounded-full">
       </div>
     </header>
 

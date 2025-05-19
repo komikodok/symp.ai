@@ -8,15 +8,24 @@ const { role, content } = defineProps<{
 
 <template>
     <div class="mb-10 break-words break-all whitespace-normal" :class="role === 'bot' ? 'chat chat-start' : 'chat chat-end'">
-        <p 
-            :class="[
-                'chat-bubble max-w-[75%]',
-                role === 'user' 
-                    ? 'bg-base-300 text-slate-950'
-                    : 'bg-cyan-800 text-base-100'
-            ]"
+        <div 
+            class="flex gap-3 max-w-[85%]"
         >
-            {{ content }}
-        </p>
+            <img
+                v-if="role === 'bot'" 
+                src="/logo2.png" alt="Chat logo"
+                class="w-12 h-12 rounded-full m-2"
+            >
+            <p 
+                :class="[
+                    '',
+                    role === 'user' 
+                        ? 'chat-bubble bg-cyan-800 text-base-100'
+                        : 'text-slate-950'
+                ]"
+            >
+                {{ content }}
+            </p>
+        </div>
     </div>
 </template>
