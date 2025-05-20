@@ -7,6 +7,10 @@ const { promptProps} = defineProps<{
 
 const prompt = ref<string>("");
 
+const emit = defineEmits<{
+    (e: 'send-message', prompt: string): void
+}>();
+
 watch(() => promptProps, (newVal) => {
     if (newVal) {
         prompt.value = newVal;
@@ -30,12 +34,21 @@ const autoResize = () => {
 };
 
 watch(prompt, autoResize);
+
+const handleSubmit = () => {
+    if (promptProps) {
+        emit('send-message', promptProps);
+    }
+    emit('send-message', prompt.value);
+    navigateTo('/konsultasi/diabetes')
+    prompt.value = ""
+}
 </script>
 
 <template>
     <form
       class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-4xl px-4 pb-4"
-      @submit.prevent
+      @submit.prevent="handleSubmit"
     >
         <motion.div 
             :animate="{ y: [100, 0], opacity: [0, 1]}"
@@ -49,7 +62,7 @@ watch(prompt, autoResize);
             rows="1"
             class="w-full resize-none overflow-hidden bg-white outline-none"
             placeholder="Tanyakan keluhan anda"
-            @keydown.enter.prevent
+            @keydown.enter.prevent="handleSubmit"
             />
             <div class="tooltip" data-tip="Kirim pesan">
                 <button 

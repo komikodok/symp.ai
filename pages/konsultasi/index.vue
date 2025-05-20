@@ -3,14 +3,14 @@ import ChatSidebar from '~/components/chatbot-page/ChatSidebar.vue';
 import ChatMenu from '~/components/chatbot-page/ChatMenu.vue';
 import ChatInput from '~/components/chatbot-page/ChatInput.vue';
 
-const prompt = ref<string>("");
+const quickPrompt = ref<string>("");
 
 const childRef = useTemplateRef<InstanceType<(typeof ChatInput)>>('child-ref');
 
 const handleClick = (e: MouseEvent) => {
   const target = e.target as HTMLElement;
 
-  prompt.value = target.innerText.trim();
+  quickPrompt.value = target.innerText.trim();
 
   childRef.value?.textareaRef?.focus();
 }
@@ -55,7 +55,7 @@ const handleClick = (e: MouseEvent) => {
       </div>
 
       <div class="mt-auto pt-6">
-        <ChatInput ref="child-ref" :prompt-props="prompt"/>
+        <ChatInput ref="child-ref" :prompt-props="quickPrompt"/>
       </div>
     </div>
   </div>

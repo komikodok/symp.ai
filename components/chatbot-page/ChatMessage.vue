@@ -1,8 +1,7 @@
 <script setup lang="ts">
-const { role, content } = defineProps<{
-    role: 'bot' | 'user',
-    content: string
-}>();
+import { type IMessage } from '~/types/message.type';
+
+const { role, content } = defineProps<IMessage>();
 
 </script>
 
