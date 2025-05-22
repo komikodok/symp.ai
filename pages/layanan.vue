@@ -5,7 +5,7 @@ import ServicesHero from '~/components/services-page/ServicesHero.vue';
 import ServicesContent from '~/components/services-page/ServicesContent.vue';
 
 definePageMeta({
-    layout: 'navbar'
+    layout: 'navbar-footer'
 });
 
 const { scrollYProgress } = useScroll();

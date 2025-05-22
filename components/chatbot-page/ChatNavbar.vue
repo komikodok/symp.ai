@@ -3,19 +3,19 @@ import { motion } from 'motion-v';
 </script>
 
 <template>
-    <motion.nav 
-        :animate="{ y: [-100, 0], opacity: [0, 1]}"
-        :transition="{ duration: 0.7 }"
+    <nav 
         class="flex justify-between items-center w-full h-20 bg-gradient-to-b from-cyan-200/90 via-cyan-200/70 to-cyan-100/90 z-10"
     >
-        <div 
+        <motion.div 
+            :animate="{ y: [-100, 0], opacity: [0, 1]}"
+            :transition="{ duration: 0.7 }"
             @click="() => navigateTo($route.fullPath)"
             class="font-bold opacity-100 text-2xl w-full text-center text-cyan-800 ml-4 cursor-pointer"
         >
             <span>
                 Konsultasi {{ inject('collapseName') }}
             </span>
-        </div>
+        </motion.div>
         
         <div class="dropdown dropdown-end mr-4">
             <div tabindex="0" role="button" class="btn btn-ghost bg-transparent border-transparent m-1">
@@ -28,5 +28,5 @@ import { motion } from 'motion-v';
                 <li><a class="text-red-500">Hapus</a></li>
             </ul>
         </div>
-    </motion.nav>
+    </nav>
 </template>

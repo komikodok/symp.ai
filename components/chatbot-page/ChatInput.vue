@@ -36,12 +36,17 @@ const autoResize = () => {
 watch(prompt, autoResize);
 
 const handleSubmit = () => {
-    if (promptProps) {
-        emit('send-message', promptProps);
-    }
     emit('send-message', prompt.value);
-    navigateTo('/konsultasi/diabetes')
-    prompt.value = ""
+
+    if (promptProps) {
+        navigateTo({
+            path: '/konsultasi/diabetes',
+            query: {
+                'prompt': prompt.value
+            }
+        });
+    }
+    prompt.value = "";
 }
 </script>
 

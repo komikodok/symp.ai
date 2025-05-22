@@ -5,7 +5,7 @@
     <footer class="footer sm:footer-horizontal bg-cyan-950 text-neutral-content p-10">
         <nav>
             <h6 class="footer-title">Layanan</h6>
-            <a href="#" class="link link-hover">AI Chatbot</a>
+            <a href="#" class="link link-hover">Chatbot AI</a>
             <a href="#" class="link link-hover">Analisis Dokumen Medis</a>
             <a href="#" class="link link-hover">Analisis Foto Medis</a>
         </nav>

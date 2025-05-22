@@ -60,7 +60,4 @@
             <button class="btn text-base-300 font-bold bg-cyan-600 hover:bg-cyan-700 active:bg-cyan-700">Daftar</button>
         </div>
     </div>
-
-    <slot />
-
 </template>

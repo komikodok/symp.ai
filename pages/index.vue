@@ -5,7 +5,7 @@ import SpecialistContent from '~/components/landing-page/SpecialistContent.vue';
 import CharacterIntro from '~/components/landing-page/CharacterIntro.vue';
 
 definePageMeta({
-    layout: 'navbar'
+    layout: 'navbar-footer'
 });
 
 const { scrollYProgress } = useScroll();

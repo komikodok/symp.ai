@@ -6,9 +6,10 @@ const { role, content } = defineProps<IMessage>();
 </script>
 
 <template>
-    <div class="mb-10 break-words break-all whitespace-normal" :class="role === 'bot' ? 'chat chat-start' : 'chat chat-end'">
+    
+    <div class="mb-10 break-words break-all whitespace-normal" :class="role === 'user' && 'chat chat-end'">
         <div 
-            class="flex gap-3 max-w-[85%]"
+            class="flex gap-3"
         >
             <img
                 v-if="role === 'bot'" 
@@ -17,7 +18,7 @@ const { role, content } = defineProps<IMessage>();
             >
             <p 
                 :class="[
-                    '',
+                    'max-w-5xl',
                     role === 'user' 
                         ? 'chat-bubble bg-cyan-800 text-base-100'
                         : 'text-slate-950'
@@ -27,4 +28,5 @@ const { role, content } = defineProps<IMessage>();
             </p>
         </div>
     </div>
+
 </template>

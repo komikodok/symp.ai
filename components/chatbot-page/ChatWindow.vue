@@ -7,6 +7,15 @@ import { type IMessage } from '~/types/message.type';
 
 const messages = ref<IMessage[]>([]);
 
+const route = useRoute();
+
+onMounted(() => {
+  const queryPrompt = route.query.prompt
+  if (typeof queryPrompt === 'string') {
+    handleSendMessage(queryPrompt)
+  }
+})
+
 const handleSendMessage = (prompt: string) => {
   if (!prompt) return;
 
@@ -25,12 +34,11 @@ const handleSendMessage = (prompt: string) => {
 </script>
 
 <template>
-  <div class="relative flex flex-col w-full h-screen overflow-hidden">
+  <div class="relative flex flex-col w-full h-screen">
     <ChatNavbar />
-
-    <ChatBody :messages="messages" />
-
-    <ChatInput @send-message="handleSendMessage"/>
     
+    <ChatBody :messages="messages" />
+    
+    <ChatInput @send-message="handleSendMessage"/>
   </div>
 </template>
