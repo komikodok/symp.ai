@@ -24,7 +24,7 @@ import { motion } from 'motion-v';
                 class="chat chat-start"
             >
                 <div class="chat-bubble bg-cyan-500 text-base-100">
-                    Tahukah kamu? Dengan Aeglen, kamu bisa berkonsultasi tentang gejala kesehatan tanpa harus antre di klinik.
+                    Tahukah kamu? Dengan Symp, kamu bisa berkonsultasi tentang gejala kesehatan tanpa harus antre di klinik.
                 </div>
             </motion.div>
         </div>

@@ -7,15 +7,7 @@ const { messages } = defineProps<{
   messages: IMessage[]
 }>();
 
-const endMessage = useTemplateRef<(HTMLDivElement)>('end-message');
 
-onMounted(() => {
-  endMessage.value?.scrollIntoView({ behavior: 'smooth', block: 'end' });
-});
-
-watch(() => messages, () => {
-  endMessage.value?.scrollIntoView({ behavior: 'smooth', block: 'end' });
-}, { deep: true })
 </script>
 
 <template>
@@ -26,7 +18,6 @@ watch(() => messages, () => {
       <div v-for="(message, index) in messages">
         <ChatMessage :key="index" :role="message.role" :content="message.content"/>
       </div>
-      <div ref="end-message" class="h-52" />
     </div>
   </motion.div>
 </template>

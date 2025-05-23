@@ -3,6 +3,15 @@ import { type IMessage } from '~/types/message.type';
 
 const { role, content } = defineProps<IMessage>();
 
+const endMessage = useTemplateRef<(HTMLDivElement)>('end-message');
+
+onMounted(() => {
+  endMessage.value?.scrollIntoView({ behavior: 'smooth', block: 'end' });
+});
+
+watch(() => content, () => {
+  endMessage.value?.scrollIntoView({ behavior: 'smooth', block: 'end' });
+}, { deep: true })
 </script>
 
 <template>
@@ -14,7 +23,7 @@ const { role, content } = defineProps<IMessage>();
             <img
                 v-if="role === 'bot'" 
                 src="/logo2.png" alt="Chat logo"
-                class="w-12 h-12 rounded-full m-2"
+                class="w-8 rounded-full m-2"
             >
             <p 
                 :class="[
@@ -28,5 +37,7 @@ const { role, content } = defineProps<IMessage>();
             </p>
         </div>
     </div>
+    <div v-if="role === 'bot'" ref="end-message" class="" />
+
 
 </template>

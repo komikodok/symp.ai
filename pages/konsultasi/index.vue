@@ -24,7 +24,7 @@ const handleClick = (e: MouseEvent) => {
     <div class="relative flex flex-col w-full h-full p-6">
       <div class="text-center mt-10">
         <h2 class="font-bold text-3xl text-cyan-800">Konsultasikan Keluhan Anda Sekarang</h2>
-        <p class="text-gray-500 mt-2">Klik salah satu topik di bawah atau ketik keluhan Anda</p>
+        <p class="text-gray-500 mt-2">Klik salah satu topik di bawah atau konsultasi keluhan Anda</p>
       </div>
 
       <div class="flex flex-wrap gap-3 justify-center mt-8 w-[80%] mx-auto">
