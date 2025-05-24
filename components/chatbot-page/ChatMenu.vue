@@ -14,7 +14,7 @@ import ChatCollapse from './ChatCollapse.vue';
       :initial="{ opacity: 0 }"
       :animate="{ opacity: 1 }"
       :transition="{ delay: 0.3, duration: 1 }"
-      class="relative w-full h-20 flex justify-between items-center px-6 bg-gradient-to-r from-cyan-500 to-blue-500 "
+      class="relative w-full h-20 flex justify-between items-center px-6 bg-gradient-to-r from-cyan-300 to-cyan-500 "
     >
       <motion.div
         :while-hover="{ scale: 1.1, rotate: 2 }"
