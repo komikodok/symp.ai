@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { motion } from 'motion-v';
-import ChatMessage from './ChatMessage.vue';
+import UserMessage from './UserMessage.vue';
+import BotMessage from './BotMessage.vue';
 import { type IMessage } from '~/types/message.type';
 
 const { messages } = defineProps<{
@@ -16,7 +17,10 @@ const { messages } = defineProps<{
   >
     <div class="max-w-3xl mx-auto">
       <div v-for="(message, index) in messages">
-        <ChatMessage :key="index" :role="message.role" :content="message.content"/>
+        <div :key="index">
+          <UserMessage v-if="message.role === 'user'" :role="message.role" :content="message.content"/>
+          <BotMessage v-else-if="message.role === 'bot'" :role="message.role" :content="message.content"/>
+        </div>
       </div>
     </div>
   </motion.div>
