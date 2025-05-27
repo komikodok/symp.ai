@@ -7,8 +7,7 @@ const { scrollYProgress } = defineProps<{
   scrollYProgress: MotionValue<number>
 }>();
 
-const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.6, 1, 0.5]);
-const opacity = useTransform(scrollYProgress, [0, 0.5, 0.75], [0.2, 1, 0.2]);
+const opacity = useTransform(scrollYProgress, [0, 0.5, 0.6], [0, 1, 0]);
 
 const openModal = ref<boolean>(false);
 
@@ -22,7 +21,10 @@ watch(openModal, (isOpen) => {
 </script>
 
 <template>
-  <motion.section :style="{scale, opacity}" class="relative max-w-7xl mx-auto p-6 mb-32 md:px-9 overflow-hidden">
+  <motion.section 
+    :style="{ opacity }" 
+    class="relative max-w-7xl mx-auto p-6 mb-32 md:px-9 overflow-hidden"
+  >
 
     <div class="p-6 my-10 rounded-xl bg-white shadow-xl">
       <h1 class="text-4xl text-cyan-700 font-extrabold mb-8 drop-shadow">

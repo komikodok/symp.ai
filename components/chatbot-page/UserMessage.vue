@@ -21,7 +21,7 @@ function handleEditMode() {
     editMode.value = true;
     
     nextTick(() => {
-    childRef.value?.editModeRef?.focus()
+        childRef.value?.editModeRef?.focus()
   });
 }
 </script>
@@ -31,7 +31,7 @@ function handleEditMode() {
         <p v-if="!editMode" class="chat-bubble bg-cyan-800 text-base-100">
             {{ content }}
         </p>
-        <EditMode v-else-if="editMode" ref="child-ref" />
+        <EditMode v-else-if="editMode" ref="child-ref" @cancel:edit-mode="() => editMode = false" />
 
         <div v-if="!isCopied && !editMode" class="chat-footer flex gap-3 py-2">
             <button @click="handleCopy" class="cursor-pointer tooltip tooltip-bottom" data-tip="Simpan">

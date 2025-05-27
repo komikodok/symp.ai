@@ -8,7 +8,7 @@ import ChatCollapse from './ChatCollapse.vue';
     :initial="{ opacity: 0, y: -40 }"
     :animate="{ opacity: 1, y: 0 }"
     :transition="{ duration: 0.8, easing: 'easeOut' }"
-    class="w-82 flex-shrink-0 bg-white rounded-lg overflow-hidden shadow-xl"
+    class="w-82 flex flex-col flex-shrink-0 h-screen bg-white rounded-lg shadow-xl"
   >
     <motion.header
       :initial="{ opacity: 0 }"
@@ -18,13 +18,13 @@ import ChatCollapse from './ChatCollapse.vue';
     >
       <motion.div
         :while-hover="{ scale: 1.1, rotate: 2 }"
-        :transition="{ type: 'spring', stiffness: 300 }"
+        :transition="{ type: 'spring', stiffness: 900 }"
         class="flex-shrink-0 flex relative"
       >
         <img src="/logo.png" alt="Symp Logo" class="w-24 drop-shadow-xl" />
       </motion.div>
     </motion.header>
 
-    <ChatCollapse @select-collapse="(collapseName: string) => $emit('select-collapse', collapseName)" />
+    <ChatCollapse />
   </motion.div>
 </template>

@@ -1,21 +1,30 @@
 <script setup lang="ts">
 import { motion } from 'motion-v';
+
+const { data, error } = useFetch('/api/penyakit');
+
+onMounted(() => {
+    if (error.value) {
+        alert(error.value.message);
+    }
+});
+
+const route = useRoute();
+const diseases = data.value?.find((item) => item.slug === route.params.penyakit);
 </script>
 
 <template>
     <nav 
         class="flex justify-between items-center w-full h-20 bg-gradient-to-b from-cyan-200/90 via-cyan-200/70 to-cyan-100/90 z-10"
     >
-        <motion.div 
+        <motion.h2 
             :animate="{ y: [-100, 0], opacity: [0, 1]}"
-            :transition="{ duration: 0.7 }"
+            :transition="{ duration: 0.7, type: 'spring', stiffness: 300 }"
             @click="() => navigateTo($route.fullPath)"
             class="font-bold opacity-100 text-2xl w-full text-center text-cyan-800 ml-4 cursor-pointer"
         >
-            <span>
-                Konsultasi {{ inject('collapseName') }}
-            </span>
-        </motion.div>
+            Konsultasi {{ diseases?.name }}
+        </motion.h2>
         
         <div class="dropdown dropdown-end mr-4">
             <div tabindex="0" role="button" class="btn btn-ghost bg-transparent border-transparent m-1">
