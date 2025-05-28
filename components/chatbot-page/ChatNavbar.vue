@@ -1,16 +1,27 @@
 <script setup lang="ts">
 import { motion } from 'motion-v';
 
+import { type IDisesases } from '~/types/disesases.type';
+
 const { data, error } = useFetch('/api/penyakit');
 
-onMounted(() => {
-    if (error.value) {
-        alert(error.value.message);
-    }
+const diseases = reactive<IDisesases>({
+    name: '',
+    slug: ''
 });
 
 const route = useRoute();
-const diseases = data.value?.find((item) => item.slug === route.params.penyakit);
+
+watch(data, () => {
+    if (error.value) {
+        alert(error.value.message);
+    } else {
+        const diseasesData = data.value?.find(item => item.slug === route.params.penyakit);
+        diseases.name = diseasesData?.name;
+        diseases.slug = diseasesData?.slug;
+    }
+}, { immediate: true });
+
 </script>
 
 <template>

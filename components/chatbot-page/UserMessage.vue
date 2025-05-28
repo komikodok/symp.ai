@@ -1,8 +1,12 @@
 <script setup lang="ts">
-import EditMode from './EditMode.vue';
-import { type IMessage } from '~/types/message.type';
+import { motion } from 'motion-v';
 
-const { role, content } = defineProps<IMessage>();
+import EditMode from './EditMode.vue';
+
+const { role, content } = defineProps<{
+    role: string,
+    content: string
+}>();
 
 const isCopied = ref<boolean>(false);
 const editMode = ref<boolean>(false);
@@ -27,7 +31,11 @@ function handleEditMode() {
 </script>
 
 <template>
-    <div class="mb-10 break-words break-all whitespace-normal chat chat-end">
+    <motion.div 
+        :animate="{ x: [100, 0], opacity: [0, 1] }"
+        :transition="{ type: 'spting', stiffness: 50 }"
+        class="mb-10 break-words break-all whitespace-normal chat chat-end"
+    >
         <p v-if="!editMode" class="chat-bubble bg-cyan-800 text-base-100">
             {{ content }}
         </p>
@@ -46,5 +54,5 @@ function handleEditMode() {
             </button>
         </div>
         <h2 v-else-if="isCopied" class="chat-footer gap-3 py-1 opacity-80 text-sm">Pesan disimpan</h2>
-    </div>
+    </motion.div>
 </template>

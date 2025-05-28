@@ -30,6 +30,7 @@ const handleSendMessage = (prompt: string) => {
     content: 'Maaf fitur ini belum tersedia.'
   }
   messages.value.push(newBotMessage);
+
 }
 </script>
 

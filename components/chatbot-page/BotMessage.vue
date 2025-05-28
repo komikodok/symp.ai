@@ -1,14 +1,21 @@
 <script setup lang="ts">
 import { type IMessage } from '~/types/message.type';
 
-const { role, content } = defineProps<IMessage>();
+const { role, content } = defineProps<{
+    role: string,
+    content: string,
+}>();
 
 const endMessage = useTemplateRef<(HTMLDivElement)>('end-message');
 
 const isCopied = ref<boolean>(false);
 
+const isWaiting = ref<boolean>(true);
+
 onMounted(() => {
   endMessage.value?.scrollIntoView({ behavior: 'smooth', block: 'end' });
+
+  setTimeout(() => isWaiting.value = false, 1000);
 });
 
 watch(() => content, () => {
@@ -33,7 +40,8 @@ function handleCopy() {
             </div>
         </div>
 
-        <p class="text-slate-950">
+        <span v-if="isWaiting" class="loading loading-spinner loading-md opacity-50" />
+        <p v-else-if="!isWaiting" class="text-slate-950">
             {{ content }}
         </p>
 

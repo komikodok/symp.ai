@@ -5,7 +5,7 @@ import BotMessage from './BotMessage.vue';
 import { type IMessage } from '~/types/message.type';
 
 const { messages } = defineProps<{
-  messages: IMessage[]
+  messages: IMessage[],
 }>();
 
 
@@ -18,8 +18,16 @@ const { messages } = defineProps<{
     <div class="max-w-3xl mx-auto">
       <div v-for="(message, index) in messages">
         <div :key="index">
-          <UserMessage v-if="message.role === 'user'" :role="message.role" :content="message.content"/>
-          <BotMessage v-else-if="message.role === 'bot'" :role="message.role" :content="message.content"/>
+          <UserMessage 
+            v-if="message.role === 'user'" 
+            :role="message.role" 
+            :content="message.content"
+          />
+          <BotMessage 
+            v-else-if="message.role === 'bot'" 
+            :role="message.role" 
+            :content="message.content" 
+          />
         </div>
       </div>
     </div>
