@@ -8,6 +8,10 @@ definePageMeta({
     layout: 'navbar-footer'
 });
 
+useHead({
+    title: "Layanan"
+})
+
 const { scrollYProgress } = useScroll();
 const scrollIndicator = {
     scaleX: scrollYProgress,

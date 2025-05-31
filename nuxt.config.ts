@@ -8,4 +8,6 @@ export default defineNuxtConfig({
   },
   css: ["/assets/app.css"],
   modules: ['motion-v/nuxt'],
+  ssr: false,
+  spaLoadingTemplate: true
 })

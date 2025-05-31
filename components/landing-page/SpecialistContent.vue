@@ -61,7 +61,7 @@ watch(openModal, (isOpen) => {
             <img src="/dermatology.png" alt="Kulit">
           </div>
           <p class="text-gray-700 text-sm font-medium leading-tight">
-            Penyakit Kulit
+            Kulit
           </p>
         </div>
         <div class="p-4 flex flex-col items-center text-center hover:scale-105 active:scale-95">
@@ -69,7 +69,7 @@ watch(openModal, (isOpen) => {
             <img src="/hearth.png" alt="Jantung">
           </div>
           <p class="text-gray-700 text-sm font-medium leading-tight">
-            Penyakit Jantung
+            Jantung
           </p>
         </div>
         <div @click="openModal = true" class="p-4 flex flex-col items-center text-center hover:scale-105 active:scale-95">

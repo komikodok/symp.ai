@@ -5,6 +5,10 @@ import ChatSidebar from '~/components/chatbot-page/ChatSidebar.vue';
 import ChatMenu from '~/components/chatbot-page/ChatMenu.vue';
 import ChatInput from '~/components/chatbot-page/ChatInput.vue';
 
+useHead({
+    title: "Layanan Konsultasi Medis"
+})
+
 const quickPrompt = ref<string>("");
 
 const childRef = useTemplateRef<InstanceType<(typeof ChatInput)>>('child-ref');
