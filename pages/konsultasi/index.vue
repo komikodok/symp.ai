@@ -71,7 +71,7 @@ const handleClick = (e: MouseEvent) => {
       </div>
 
       <div class="mt-auto pt-6">
-        <ChatInput ref="child-ref" :prompt-props="quickPrompt"/>
+        <ChatInput ref="child-ref" @send-message="(prompt) => quickPrompt = prompt" :prompt-props="quickPrompt"/>
       </div>
     </div>
   </div>
