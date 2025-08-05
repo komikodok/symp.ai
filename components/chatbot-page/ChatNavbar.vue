@@ -31,7 +31,7 @@ watch(data, () => {
         <motion.h2 
             :animate="{ y: [-100, 0], opacity: [0, 1]}"
             :transition="{ duration: 0.7, type: 'spring', stiffness: 300 }"
-            @click="() => navigateTo($route.fullPath)"
+            @click="() => navigateTo(route.fullPath)"
             class="font-bold opacity-100 text-2xl w-full text-center text-cyan-800 ml-4 cursor-pointer"
         >
             Konsultasi {{ diseases?.name }}

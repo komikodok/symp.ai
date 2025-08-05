@@ -62,13 +62,13 @@ const handleSubmit = () => {
         >
             <div class="flex items-center gap-2">
                 <textarea
-                ref="textarea-ref"
-                v-model="prompt"
-                name="prompt"
-                rows="1"
-                class="w-full resize-none overflow-hidden bg-white outline-none"
-                placeholder="Tanyakan keluhan anda"
-                @keydown.enter.prevent="handleSubmit"
+                    ref="textarea-ref"
+                    v-model="prompt"
+                    name="prompt"
+                    rows="1"
+                    class="w-full resize-none overflow-hidden bg-white outline-none"
+                    placeholder="Tanyakan keluhan anda"
+                    @keydown.enter.prevent="handleSubmit"
                 />
                 <div class="tooltip" data-tip="Kirim pesan">
                     <button 
