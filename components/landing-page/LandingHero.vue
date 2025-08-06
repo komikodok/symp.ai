@@ -55,7 +55,7 @@ import LandingImage from './LandingImage.vue';
           </motion.div>
       </div>
 
-      <div class="w-full grid grid-cols-2 max-lg:gap-4 lg:grid-cols-3 my-7 lg:my-8 justify-items-center">
+      <div class="w-full grid grid-cols-1 max-lg:gap-6 lg:grid-cols-3 my-7 lg:my-8 justify-items-center">
         <motion.div
           :initial="{ opacity: 0, y: 50 }"
           :animate="{ opacity: 1, y: 0 }"
